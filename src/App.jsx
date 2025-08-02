@@ -212,7 +212,7 @@ const Portfolio = () => {
           <div className="mb-8 floating">
             <div className="w-36 h-36 mx-auto bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full flex items-center justify-center p-1 glow-effect">
               <div className="w-full h-full bg-gray-900 rounded-full overflow-hidden">
-                <img ssrc="/PicsArt_03-07-10.07.05.jpg" alt="Mohamed Salah" className="w-full h-full object-cover" />
+                <img src="pic.jpg" alt="Mohamed Salah" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
