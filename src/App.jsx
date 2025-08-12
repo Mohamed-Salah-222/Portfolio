@@ -37,23 +37,32 @@ const Portfolio = () => {
     {
       title: "E-Commerce Platform",
       description: "A full-featured online shopping platform with user authentication, product catalog, shopping cart, and payment integration. Built with the complete MERN stack.",
+      longDescription: "This comprehensive e-commerce solution features a modern, responsive design with advanced product filtering, secure user authentication using JWT, integrated payment processing with Stripe, and a complete admin dashboard for inventory management. The platform handles everything from user registration to order fulfillment.",
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/Mohamed-Salah-222/E-Commerce-App",
+      demo: "https://e-commerce-app-neon-eight.vercel.app/",
+      features: ["User Authentication & Authorization", "Shopping Cart & Checkout", "Payment Integration", "Admin Dashboard", "Product Reviews & Ratings"],
+      screenshots: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"],
     },
     {
       title: "Recipe Share App",
       description: "A social platform for food enthusiasts to share, discover, and save recipes. Features include user profiles, recipe ratings, and advanced search functionality.",
+      longDescription: "A vibrant community-driven platform where food lovers can share their favorite recipes, discover new cuisines, and connect with fellow cooking enthusiasts. The app features advanced search and filtering, recipe collections, step-by-step cooking guides, and social features like comments and ratings.",
       tech: ["React", "Node.js", "Express", "MongoDB", "Cloudinary"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/Mohamed-Salah-222/Recipe-App",
+      demo: "https://recipe-app-blush-three.vercel.app/",
+      features: ["Recipe Sharing & Discovery", "Advanced Search & Filters", "User Profiles & Collections", "Photo Upload & Storage", "Community Ratings & Reviews"],
+      screenshots: ["public/Recipe pic.png", "public/recipe pic 2.png"],
     },
     {
       title: "StudyBuddy",
       description: "A comprehensive study companion with tools for creating study plans, taking notes, setting reminders, and tracking progress. Perfect for students and professionals.",
+      longDescription: "An all-in-one study management application designed to help students and professionals organize their learning journey. Features include intelligent study scheduling, collaborative note-taking, progress tracking with analytics, and integration with popular calendar apps for seamless workflow management.",
       tech: ["React", "Node.js", "Express", "MongoDB", "Calendar API"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/Mohamed-Salah-222/StudyBuddy",
+      demo: "https://study-buddy-blush.vercel.app/",
+      features: ["Smart Study Planning", "Collaborative Note-Taking", "Progress Analytics", "Calendar Integration", "Study Group Management"],
+      screenshots: ["public/Study.png", "public/Study 2.png"],
     },
   ];
 
@@ -304,29 +313,77 @@ const Portfolio = () => {
       <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Featured Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {projects.map((project, index) => (
-              <div key={project.title} className="group bg-gray-900/60 rounded-2xl sm:rounded-3xl overflow-hidden hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 backdrop-blur-sm border border-gray-800 card-glow hover:border-gray-700" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white font-display group-hover:text-gray-200 transition-colors duration-300">{project.title}</h3>
-                  <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed font-light text-sm sm:text-base">{project.description}</p>
 
-                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
-                    {project.tech.map((tech) => (
-                      <span key={tech} className="bg-gray-800/60 px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium border border-gray-700 font-mono">
-                        {tech}
-                      </span>
-                    ))}
+          <div className="space-y-24 sm:space-y-32">
+            {projects.map((project, index) => (
+              <div key={project.title} className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-8 lg:gap-16`} style={{ animationDelay: `${index * 0.2}s` }}>
+                {/* Screenshots Section */}
+                <div className="w-full lg:w-1/2 relative">
+                  <div className="relative group">
+                    {/* Main Screenshot */}
+                    <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+                      <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                        <img src={project.screenshots[0]} alt={`${project.title} Screenshot 1`} className="w-full h-full object-cover" />
+                        {/* Overlay for demo effect */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      </div>
+                    </div>
+
+                    {/* Secondary Screenshot */}
+                    <div className="absolute -bottom-4 -right-4 w-1/2 overflow-hidden rounded-xl bg-gray-900 border border-gray-800 shadow-xl transform group-hover:scale-110 transition-all duration-500 delay-100">
+                      <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900">
+                        <img src={project.screenshots[1]} alt={`${project.title} Screenshot 2`} className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+
+                    {/* Floating Elements */}
+                    <div className="absolute -top-4 -left-4 w-8 h-8 bg-white rounded-full opacity-80 group-hover:scale-125 transition-transform duration-300"></div>
+                    <div className="absolute top-1/2 -right-2 w-4 h-4 bg-gray-400 rounded-full opacity-60 group-hover:scale-150 transition-transform duration-300 delay-200"></div>
+                  </div>
+                </div>
+
+                {/* Project Details Section */}
+                <div className="w-full lg:w-1/2 space-y-6">
+                  {/* Project Title */}
+                  <div>
+                    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black font-display text-white mb-4 leading-tight">{project.title}</h3>
+                    <p className="text-lg sm:text-xl text-gray-400 leading-relaxed font-light">{project.longDescription}</p>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                    <a href={project.demo} className="group/btn flex items-center justify-center space-x-2 bg-white text-black hover:bg-gray-200 px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm font-semibold transition-all duration-300 shadow-lg">
-                      <ExternalLink size={16} className="group-hover/btn:scale-110 transition-transform duration-200" />
+                  {/* Key Features */}
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-4 font-display">Key Features</h4>
+                    <ul className="space-y-2">
+                      {project.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start space-x-3 text-gray-300">
+                          <span className="text-white mt-1.5 text-xs">▸</span>
+                          <span className="font-light">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-4 font-display">Built With</h4>
+                    <div className="flex flex-wrap gap-3">
+                      {project.tech.map((tech) => (
+                        <span key={tech} className="bg-gray-900 border border-gray-700 px-4 py-2 rounded-lg text-sm font-medium font-mono text-gray-300 hover:border-gray-600 transition-colors duration-300">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+                      <ExternalLink size={20} className="group-hover:scale-110 transition-transform duration-200" />
                       <span>Live Demo</span>
                     </a>
-                    <a href={project.github} className="group/btn flex items-center justify-center space-x-2 border border-gray-700 hover:border-gray-600 bg-gray-800/50 hover:bg-gray-700/50 px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm font-semibold transition-all duration-300">
-                      <Github size={16} className="group-hover/btn:scale-110 transition-transform duration-200" />
-                      <span>Code</span>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 border-2 border-gray-700 hover:border-white bg-transparent hover:bg-white hover:text-black px-8 py-4 rounded-xl font-bold transition-all duration-300 text-lg">
+                      <Github size={20} className="group-hover:scale-110 transition-transform duration-200" />
+                      <span>View Code</span>
                     </a>
                   </div>
                 </div>
