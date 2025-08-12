@@ -52,7 +52,7 @@ const Portfolio = () => {
       github: "https://github.com/Mohamed-Salah-222/Recipe-App",
       demo: "https://recipe-app-blush-three.vercel.app/",
       features: ["Recipe Sharing & Discovery", "Advanced Search & Filters", "User Profiles & Collections", "Photo Upload & Storage", "Community Ratings & Reviews"],
-      screenshots: ["public/Recipe pic.png", "public/recipe pic 2.png"],
+      screenshots: ["Recipe pic.png", "recipe pic 2.png"],
     },
     {
       title: "StudyBuddy",
@@ -62,7 +62,7 @@ const Portfolio = () => {
       github: "https://github.com/Mohamed-Salah-222/StudyBuddy",
       demo: "https://study-buddy-blush.vercel.app/",
       features: ["Smart Study Planning", "Collaborative Note-Taking", "Progress Analytics", "Calendar Integration", "Study Group Management"],
-      screenshots: ["public/Study.png", "public/Study 2.png"],
+      screenshots: ["Study.png", "Study 2.png"],
     },
   ];
 
