@@ -27,10 +27,10 @@ const Portfolio = () => {
   };
 
   const skills = [
-    { name: "MongoDB", icon: Database, color: "text-emerald-400" },
-    { name: "Express.js", icon: Server, color: "text-orange-400" },
+    { name: "MongoDB", icon: Database, color: "text-green-400" },
+    { name: "Express.js", icon: Server, color: "text-yellow-400" },
     { name: "React.js", icon: Code, color: "text-cyan-400" },
-    { name: "Node.js", icon: Globe, color: "text-lime-400" },
+    { name: "Node.js", icon: Globe, color: "text-emerald-400" },
   ];
 
   const projects = [
@@ -78,7 +78,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-purple-950 to-indigo-950 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Custom CSS for fonts and animations */}
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
@@ -96,15 +96,15 @@ const Portfolio = () => {
         }
 
         .glow-effect {
-          filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+          filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
         }
 
         .text-glow {
-          text-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
         }
 
         .card-glow {
-          box-shadow: 0 0 50px rgba(59, 130, 246, 0.1);
+          box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
         }
 
         .pulse-border {
@@ -113,15 +113,15 @@ const Portfolio = () => {
 
         @keyframes pulse-border {
           0% {
-            border-color: rgba(59, 130, 246, 0.3);
+            border-color: rgba(75, 85, 99, 0.5);
           }
           100% {
-            border-color: rgba(139, 92, 246, 0.6);
+            border-color: rgba(255, 255, 255, 0.2);
           }
         }
 
         .gradient-border {
-          background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+          background: linear-gradient(45deg, #374151, #6b7280, #9ca3af, #d1d5db);
           background-size: 400% 400%;
           animation: gradient-flow 3s ease infinite;
         }
@@ -162,31 +162,39 @@ const Portfolio = () => {
             transform: translateY(0);
           }
         }
+
+        .bg-grid {
+          background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+          background-size: 50px 50px;
+        }
       `}</style>
 
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-cyan-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gray-800 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-gray-700 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-20 w-72 h-72 bg-gray-600 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-2000"></div>
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-gray-950/80 backdrop-blur-xl z-50 border-b border-gray-800/50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+      <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-xl z-50 border-b border-gray-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex justify-between items-center">
+            {/* Logo/Name */}
+            <div className="font-display font-bold text-xl text-white">MS</div>
+
             {/* Desktop Navigation */}
-            <div className="hidden md:flex justify-between w-full">
+            <div className="hidden md:flex space-x-8">
               {["home", "about", "skills", "projects", "experience", "contact"].map((item) => (
-                <button key={item} onClick={() => scrollToSection(item)} className={`capitalize font-medium tracking-wide hover:text-cyan-400 transition-all duration-300 relative group ${activeSection === item ? "text-cyan-400" : "text-gray-300"}`}>
+                <button key={item} onClick={() => scrollToSection(item)} className={`capitalize font-medium tracking-wide hover:text-white transition-all duration-300 relative group ${activeSection === item ? "text-white" : "text-gray-400"}`}>
                   {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                 </button>
               ))}
             </div>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden mx-auto p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button className="md:hidden p-2 rounded-lg bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 border border-gray-800" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -194,10 +202,10 @@ const Portfolio = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-gray-950/95 backdrop-blur-xl border-t border-gray-800/50">
-            <div className="px-6 py-4 space-y-4">
+          <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-gray-800/50">
+            <div className="px-4 sm:px-6 py-4 space-y-4">
               {["home", "about", "skills", "projects", "experience", "contact"].map((item) => (
-                <button key={item} onClick={() => scrollToSection(item)} className="block w-full text-left capitalize font-medium hover:text-cyan-400 transition-all duration-300 py-2">
+                <button key={item} onClick={() => scrollToSection(item)} className="block w-full text-left capitalize font-medium hover:text-white transition-all duration-300 py-2 text-gray-300">
                   {item}
                 </button>
               ))}
@@ -207,37 +215,37 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative">
+      <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 relative bg-grid">
         <div className="text-center max-w-5xl mx-auto z-10">
           <div className="mb-8 floating">
-            <div className="w-36 h-36 mx-auto bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full flex items-center justify-center p-1 glow-effect">
-              <div className="w-full h-full bg-gray-900 rounded-full overflow-hidden">
+            <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto bg-gradient-to-r from-gray-600 to-gray-400 rounded-full flex items-center justify-center p-1 glow-effect">
+              <div className="w-full h-full bg-gray-900 rounded-full overflow-hidden border-2 border-gray-700">
                 <img src="pic.jpg" alt="Mohamed Salah" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
 
-          <h1 className="font-display text-7xl md:text-9xl font-black mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent text-glow slide-up">Mohamed Salah</h1>
+          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-black mb-6 sm:mb-8 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent text-glow slide-up">Mohamed Salah</h1>
 
-          <p className="text-2xl md:text-3xl mb-8 text-gray-300 font-medium tracking-wide slide-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-gray-300 font-medium tracking-wide slide-up" style={{ animationDelay: "0.2s" }}>
             Full-Stack Web Developer | MERN Stack Specialist
           </p>
 
-          <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed font-light slide-up" style={{ animationDelay: "0.4s" }}>
+          <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed font-light slide-up px-4" style={{ animationDelay: "0.4s" }}>
             Passionate junior developer crafting modern web applications with MongoDB, Express.js, React, and Node.js.
-            <span className="text-cyan-400 font-medium"> I bring ideas to life</span> through clean code and intuitive user experiences.
+            <span className="text-white font-medium"> I bring ideas to life</span> through clean code and intuitive user experiences.
           </p>
 
           {/* Fun Fact Counter */}
-          <div className="mb-12 p-8 bg-gray-900/50 rounded-3xl backdrop-blur-sm border pulse-border card-glow slide-up" style={{ animationDelay: "0.6s" }}>
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400 font-display">🚀 Coding Journey</h3>
-            <p className="text-lg mb-4 text-gray-300 font-medium">I've been coding for</p>
-            <div className="font-mono text-6xl md:text-8xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent tracking-tight">{formatNumber(codingSeconds)}</div>
-            <p className="text-xl mt-4 text-gray-300 font-medium tracking-wide">Seconds</p>
+          <div className="mb-8 sm:mb-12 p-6 sm:p-8 bg-gray-900/80 rounded-2xl sm:rounded-3xl backdrop-blur-sm border border-gray-800 pulse-border card-glow slide-up mx-4" style={{ animationDelay: "0.6s" }}>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white font-display">🚀 Coding Journey</h3>
+            <p className="text-base sm:text-lg mb-4 text-gray-300 font-medium">I've been coding for</p>
+            <div className="font-mono text-4xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent tracking-tight">{formatNumber(codingSeconds)}</div>
+            <p className="text-lg sm:text-xl mt-4 text-gray-300 font-medium tracking-wide">Seconds</p>
           </div>
 
-          <div className="flex justify-center space-x-6 slide-up" style={{ animationDelay: "0.8s" }}>
-            <button onClick={() => scrollToSection("projects")} className="group bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-lg hover:shadow-cyan-500/25">
+          <div className="flex justify-center slide-up" style={{ animationDelay: "0.8s" }}>
+            <button onClick={() => scrollToSection("projects")} className="group bg-white text-black hover:bg-gray-200 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-3 shadow-lg">
               <span className="font-medium">View Projects</span>
               <ChevronDown size={20} className="group-hover:translate-y-1 transition-transform duration-300" />
             </button>
@@ -246,44 +254,44 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 relative">
+      <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 relative">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-5xl md:text-6xl font-black text-center mb-20 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">About Me</h2>
-          <div className="bg-gray-900/60 rounded-3xl p-10 backdrop-blur-sm border border-gray-700/50 card-glow hover:border-cyan-500/30 transition-all duration-500">
-            <p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-8 font-light">
-              Welcome to my digital space! I'm <span className="text-cyan-400 font-semibold">Mohamed Salah</span>, a passionate junior full-stack developer specializing in the MERN stack. My journey into web development began with curiosity and has evolved into a deep love for creating meaningful digital experiences.
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">About Me</h2>
+          <div className="bg-gray-900/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 backdrop-blur-sm border border-gray-800 card-glow hover:border-gray-700 transition-all duration-500">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-300 mb-6 sm:mb-8 font-light">
+              Welcome to my digital space! I'm <span className="text-white font-semibold">Mohamed Salah</span>, a passionate junior full-stack developer specializing in the MERN stack. My journey into web development began with curiosity and has evolved into a deep love for creating meaningful digital experiences.
             </p>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-8 font-light">
-              I thrive on transforming ideas into functional, beautiful web applications. Whether it's building responsive frontends with React or crafting robust backends with Node.js and Express, I approach each project with <span className="text-purple-400 font-semibold">enthusiasm and attention to detail</span>.
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-300 mb-6 sm:mb-8 font-light">
+              I thrive on transforming ideas into functional, beautiful web applications. Whether it's building responsive frontends with React or crafting robust backends with Node.js and Express, I approach each project with <span className="text-gray-200 font-semibold">enthusiasm and attention to detail</span>.
             </p>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-300 font-light">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or planning my next big idea. I believe in <span className="text-emerald-400 font-semibold">continuous learning</span> and staying updated with the latest trends in web development.
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-300 font-light">
+              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or planning my next big idea. I believe in <span className="text-white font-semibold">continuous learning</span> and staying updated with the latest trends in web development.
             </p>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-6 bg-gray-950/30">
+      <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 bg-gray-950/50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display text-5xl md:text-6xl font-black text-center mb-20 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Skills & Technologies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Skills & Technologies</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-12 sm:mb-16">
             {skills.map((skill, index) => {
               const IconComponent = skill.icon;
               return (
-                <div key={skill.name} className="group bg-gray-900/60 p-10 rounded-3xl text-center hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 backdrop-blur-sm border border-gray-700/50 card-glow hover:border-cyan-500/30" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <IconComponent className={`w-16 h-16 mx-auto mb-6 ${skill.color} group-hover:scale-110 transition-transform duration-300 glow-effect`} />
-                  <h3 className="text-xl font-bold font-display text-gray-100">{skill.name}</h3>
+                <div key={skill.name} className="group bg-gray-900/60 p-6 sm:p-10 rounded-2xl sm:rounded-3xl text-center hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 backdrop-blur-sm border border-gray-800 card-glow hover:border-gray-700" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <IconComponent className={`w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 ${skill.color} group-hover:scale-110 transition-transform duration-300 glow-effect`} />
+                  <h3 className="text-lg sm:text-xl font-bold font-display text-gray-100">{skill.name}</h3>
                 </div>
               );
             })}
           </div>
 
-          <div className="bg-gray-900/60 rounded-3xl p-10 backdrop-blur-sm border border-gray-700/50 card-glow">
-            <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400 font-display">Additional Technologies</h3>
-            <div className="flex flex-wrap justify-center gap-4">
+          <div className="bg-gray-900/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 backdrop-blur-sm border border-gray-800 card-glow">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-white font-display">Additional Technologies</h3>
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               {["JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Git", "JWT", "REST APIs", "Mongoose", "npm"].map((tech) => (
-                <span key={tech} className="bg-gradient-to-r from-gray-800/80 to-gray-700/80 hover:from-cyan-600/20 hover:to-blue-600/20 px-6 py-3 rounded-full text-sm font-medium border border-gray-600/50 hover:border-cyan-400/50 transition-all duration-300 cursor-default backdrop-blur-sm">
+                <span key={tech} className="bg-gray-800/60 hover:bg-gray-700/60 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium border border-gray-700 hover:border-gray-600 transition-all duration-300 cursor-default backdrop-blur-sm">
                   {tech}
                 </span>
               ))}
@@ -293,30 +301,30 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-6">
+      <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display text-5xl md:text-6xl font-black text-center mb-20 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Featured Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Featured Projects</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {projects.map((project, index) => (
-              <div key={project.title} className="group bg-gray-900/60 rounded-3xl overflow-hidden hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 backdrop-blur-sm border border-gray-700/50 card-glow hover:border-purple-500/30" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-cyan-400 font-display group-hover:text-cyan-300 transition-colors duration-300">{project.title}</h3>
-                  <p className="text-gray-300 mb-8 leading-relaxed font-light text-base">{project.description}</p>
+              <div key={project.title} className="group bg-gray-900/60 rounded-2xl sm:rounded-3xl overflow-hidden hover:bg-gray-800/60 transition-all duration-500 transform hover:scale-105 backdrop-blur-sm border border-gray-800 card-glow hover:border-gray-700" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="p-6 sm:p-8">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white font-display group-hover:text-gray-200 transition-colors duration-300">{project.title}</h3>
+                  <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed font-light text-sm sm:text-base">{project.description}</p>
 
-                  <div className="flex flex-wrap gap-3 mb-8">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
                     {project.tech.map((tech) => (
-                      <span key={tech} className="bg-gradient-to-r from-gray-800/60 to-gray-700/60 px-4 py-2 rounded-full text-sm font-medium border border-gray-600/50 font-mono">
+                      <span key={tech} className="bg-gray-800/60 px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium border border-gray-700 font-mono">
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex space-x-4">
-                    <a href={project.demo} className="group/btn flex items-center space-x-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
+                  <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href={project.demo} className="group/btn flex items-center justify-center space-x-2 bg-white text-black hover:bg-gray-200 px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm font-semibold transition-all duration-300 shadow-lg">
                       <ExternalLink size={16} className="group-hover/btn:scale-110 transition-transform duration-200" />
                       <span>Live Demo</span>
                     </a>
-                    <a href={project.github} className="group/btn flex items-center space-x-2 border border-gray-600 hover:border-cyan-400 bg-gray-800/50 hover:bg-gray-700/50 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300">
+                    <a href={project.github} className="group/btn flex items-center justify-center space-x-2 border border-gray-700 hover:border-gray-600 bg-gray-800/50 hover:bg-gray-700/50 px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm font-semibold transition-all duration-300">
                       <Github size={16} className="group-hover/btn:scale-110 transition-transform duration-200" />
                       <span>Code</span>
                     </a>
@@ -329,17 +337,17 @@ const Portfolio = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 bg-gray-950/30">
+      <section id="experience" className="py-16 sm:py-24 px-4 sm:px-6 bg-gray-950/50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-5xl md:text-6xl font-black text-center mb-20 bg-gradient-to-r from-emerald-400 to-purple-400 bg-clip-text text-transparent">Experience</h2>
-          <div className="space-y-8">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Experience</h2>
+          <div className="space-y-6 sm:space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-gray-900/60 rounded-3xl p-10 backdrop-blur-sm border border-gray-700/50 hover:bg-gray-800/60 hover:border-emerald-500/30 transition-all duration-500 card-glow">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-cyan-400 font-display mb-2 md:mb-0">{exp.title}</h3>
-                  <span className="text-gray-400 font-medium font-mono bg-gray-800/50 px-4 py-2 rounded-full border border-gray-600/30">{exp.period}</span>
+              <div key={index} className="bg-gray-900/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 backdrop-blur-sm border border-gray-800 hover:bg-gray-800/60 hover:border-gray-700 transition-all duration-500 card-glow">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white font-display mb-2 sm:mb-0">{exp.title}</h3>
+                  <span className="text-gray-400 font-medium font-mono bg-gray-800/50 px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-gray-700 text-sm">{exp.period}</span>
                 </div>
-                <p className="text-gray-300 leading-relaxed text-lg font-light">{exp.description}</p>
+                <p className="text-gray-300 leading-relaxed text-base sm:text-lg font-light">{exp.description}</p>
               </div>
             ))}
           </div>
@@ -347,32 +355,32 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6">
+      <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-display text-5xl md:text-6xl font-black mb-20 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Let's Connect</h2>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Let's Connect</h2>
 
-          <p className="text-xl md:text-2xl mb-16 text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl mb-12 sm:mb-16 text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
             I'm always excited to discuss new opportunities, collaborate on projects, or just chat about web development.
-            <span className="text-cyan-400 font-semibold"> Let's build something amazing together!</span>
+            <span className="text-white font-semibold"> Let's build something amazing together!</span>
           </p>
 
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-8">
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=midosalah25552@gmail.com&su=Hello%20Mohamed!%20Let's%20Connect"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center space-x-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 px-8 py-5 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              className="group flex items-center space-x-3 sm:space-x-4 bg-white text-black hover:bg-gray-200 px-6 sm:px-8 py-4 sm:py-5 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
             >
-              <Mail size={24} className="group-hover:scale-110 transition-transform duration-200" />
-              <span className="font-medium">midosalah25552@gmail.com</span>
+              <Mail size={20} sm:size={24} className="group-hover:scale-110 transition-transform duration-200" />
+              <span className="font-medium text-sm sm:text-base">midosalah25552@gmail.com</span>
             </a>
 
             <div className="flex space-x-6">
-              <a href="https://github.com/Mohamed-Salah-222" target="_blank" rel="noopener noreferrer" className="group bg-gray-900/60 p-5 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-cyan-400/50 card-glow">
-                <Github size={28} className="group-hover:text-cyan-400 transition-colors duration-300" />
+              <a href="https://github.com/Mohamed-Salah-222" target="_blank" rel="noopener noreferrer" className="group bg-gray-900/60 p-4 sm:p-5 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 transform hover:scale-110 border border-gray-800 hover:border-gray-700 card-glow">
+                <Github size={24} sm:size={28} className="group-hover:text-white transition-colors duration-300" />
               </a>
-              <a href="https://www.linkedin.com/in/mohamed-salah-7933a6212/?trk=opento_sprofile_details" target="_blank" rel="noopener noreferrer" className="group bg-gray-900/60 p-5 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-purple-400/50 card-glow">
-                <Linkedin size={28} className="group-hover:text-purple-400 transition-colors duration-300" />
+              <a href="https://www.linkedin.com/in/mohamed-salah-7933a6212/?trk=opento_sprofile_details" target="_blank" rel="noopener noreferrer" className="group bg-gray-900/60 p-4 sm:p-5 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 transform hover:scale-110 border border-gray-800 hover:border-gray-700 card-glow">
+                <Linkedin size={24} sm:size={28} className="group-hover:text-white transition-colors duration-300" />
               </a>
             </div>
           </div>
@@ -380,12 +388,12 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-gray-800/50 bg-gray-950/50">
+      <footer className="py-6 sm:py-8 px-4 sm:px-6 border-t border-gray-800 bg-black">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-400 font-light">
+          <p className="text-gray-400 font-light text-sm sm:text-base">
             © 2025 Mohamed Salah. Built with React and lots of
-            <span className="text-cyan-400 mx-1">☕</span>
-            <span className="font-mono text-sm ml-2 text-gray-500">// Crafted with passion</span>
+            <span className="text-white mx-1">☕</span>
+            <span className="font-mono text-xs sm:text-sm ml-2 text-gray-500">// Crafted with passion</span>
           </p>
         </div>
       </footer>
