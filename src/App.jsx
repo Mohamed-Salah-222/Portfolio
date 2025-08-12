@@ -52,7 +52,7 @@ const Portfolio = () => {
       github: "https://github.com/Mohamed-Salah-222/Recipe-App",
       demo: "https://recipe-app-blush-three.vercel.app/",
       features: ["Recipe Sharing & Discovery", "Advanced Search & Filters", "User Profiles & Collections", "Photo Upload & Storage", "Community Ratings & Reviews"],
-      screenshots: ["Recipe pic.png", "recipe pic 2.png"],
+      screenshots: ["recipe pic.png", "recipe pic 2.png"],
     },
     {
       title: "StudyBuddy",
