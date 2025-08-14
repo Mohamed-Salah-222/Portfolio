@@ -6,7 +6,6 @@ const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  // Calculate coding seconds since Jan 1, 2025
   useEffect(() => {
     const startDate = new Date("2025-01-01T00:00:00");
 
@@ -21,7 +20,6 @@ const Portfolio = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Format number with commas
   const formatNumber = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
@@ -72,7 +70,7 @@ const Portfolio = () => {
       longDescription: "A feature-rich browser extension that automatically calculates accurate prayer times based on user location and provides timely reminders through both browser notifications and system-level alerts. The extension includes customizable notification settings, multiple calculation methods for different regions, and a beautiful interface showing daily prayer schedules.",
       tech: ["JavaScript", "Chrome APIs", "HTML5", "CSS3", "Geolocation API", "Notification API"],
       github: "https://github.com/Mohamed-Salah-222/Prayer-Extension",
-      demo: "#", // Add demo link when available
+      demo: "#",
       features: ["Accurate Prayer Time Calculations", "System & Browser Notifications", "Location-Based Timing", "Customizable Reminder Settings", "Beautiful Daily Schedule Interface"],
       screenshots: ["Prayer1.png"],
     },
@@ -100,7 +98,6 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Custom CSS for fonts and animations */}
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
@@ -190,21 +187,17 @@ const Portfolio = () => {
         }
       `}</style>
 
-      {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gray-800 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-gray-700 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-1000"></div>
         <div className="absolute bottom-20 left-20 w-72 h-72 bg-gray-600 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-2000"></div>
       </div>
 
-      {/* Navigation */}
       <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-xl z-50 border-b border-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex justify-between items-center">
-            {/* Logo/Name */}
             <div className="font-display font-bold text-xl text-white">MS</div>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               {["home", "about", "skills", "projects", "experience", "contact"].map((item) => (
                 <button key={item} onClick={() => scrollToSection(item)} className={`capitalize font-medium tracking-wide hover:text-white transition-all duration-300 relative group ${activeSection === item ? "text-white" : "text-gray-400"}`}>
@@ -214,14 +207,12 @@ const Portfolio = () => {
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
             <button className="md:hidden p-2 rounded-lg bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 border border-gray-800" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-gray-800/50">
             <div className="px-4 sm:px-6 py-4 space-y-4">
@@ -235,7 +226,6 @@ const Portfolio = () => {
         )}
       </nav>
 
-      {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 relative bg-grid">
         <div className="text-center max-w-5xl mx-auto z-10">
           <div className="mb-8 floating">
@@ -249,7 +239,7 @@ const Portfolio = () => {
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-black mb-6 sm:mb-8 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent text-glow slide-up">Mohamed Salah</h1>
 
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-gray-300 font-medium tracking-wide slide-up" style={{ animationDelay: "0.2s" }}>
-            Full-Stack Web Developer | MERN Stack Specialist | Extension Developer
+            Full-Stack Web Developer | MERN Stack Specialist
           </p>
 
           <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed font-light slide-up px-4" style={{ animationDelay: "0.4s" }}>
@@ -257,7 +247,6 @@ const Portfolio = () => {
             <span className="text-white font-medium"> I bring ideas to life</span> through clean code and intuitive user experiences.
           </p>
 
-          {/* Fun Fact Counter */}
           <div className="mb-8 sm:mb-12 p-6 sm:p-8 bg-gray-900/80 rounded-2xl sm:rounded-3xl backdrop-blur-sm border border-gray-800 pulse-border card-glow slide-up mx-4" style={{ animationDelay: "0.6s" }}>
             <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white font-display">🚀 Coding Journey</h3>
             <p className="text-base sm:text-lg mb-4 text-gray-300 font-medium">I've been coding for</p>
@@ -274,7 +263,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 relative">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">About Me</h2>
@@ -293,7 +281,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 bg-gray-950/50">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Skills & Technologies</h2>
@@ -322,7 +309,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Featured Projects</h2>
@@ -330,20 +316,16 @@ const Portfolio = () => {
           <div className="space-y-24 sm:space-y-32">
             {projects.map((project, index) => (
               <div key={project.title} className={`flex flex-col ${project.title === "Prayer Reminder Extension" ? "lg:flex-row lg:justify-between" : index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-8 lg:gap-16`} style={{ animationDelay: `${index * 0.2}s` }}>
-                {/* Screenshots Section */}
                 <div className={`relative ${project.title === "Prayer Reminder Extension" ? "" : "w-full lg:w-1/2"}`}>
                   <div className="relative group">
-                    {/* Main Screenshot */}
                     <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-                      {/* Conditional aspect ratio and max width based on project */}
                       <div className={`${project.title === "Prayer Reminder Extension" ? "aspect-[3/4] w-80 mx-auto" : "aspect-video"} bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center`}>
                         <img src={project.screenshots[0]} alt={`${project.title} Screenshot 1`} className="w-full h-full object-cover" />
-                        {/* Overlay for demo effect */}
+
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                       </div>
                     </div>
 
-                    {/* Secondary Screenshot - Only show for non-extension projects */}
                     {project.title !== "Prayer Reminder Extension" && (
                       <div className="absolute -bottom-4 -right-4 w-1/2 overflow-hidden rounded-xl bg-gray-900 border border-gray-800 shadow-xl transform group-hover:scale-110 transition-all duration-500 delay-100">
                         <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900">
@@ -352,21 +334,17 @@ const Portfolio = () => {
                       </div>
                     )}
 
-                    {/* Floating Elements */}
                     <div className="absolute -top-4 -left-4 w-8 h-8 bg-white rounded-full opacity-80 group-hover:scale-125 transition-transform duration-300"></div>
                     <div className="absolute top-1/2 -right-2 w-4 h-4 bg-gray-400 rounded-full opacity-60 group-hover:scale-150 transition-transform duration-300 delay-200"></div>
                   </div>
                 </div>
 
-                {/* Project Details Section */}
                 <div className={`space-y-6 ${project.title === "Prayer Reminder Extension" ? "w-full lg:flex-1" : "w-full lg:w-1/2"}`}>
-                  {/* Project Title */}
                   <div>
                     <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black font-display text-white mb-4 leading-tight">{project.title}</h3>
                     <p className="text-lg sm:text-xl text-gray-400 leading-relaxed font-light">{project.longDescription}</p>
                   </div>
 
-                  {/* Key Features */}
                   <div>
                     <h4 className="text-xl font-bold text-white mb-4 font-display">Key Features</h4>
                     <ul className="space-y-2">
@@ -379,7 +357,6 @@ const Portfolio = () => {
                     </ul>
                   </div>
 
-                  {/* Tech Stack */}
                   <div>
                     <h4 className="text-xl font-bold text-white mb-4 font-display">Built With</h4>
                     <div className="flex flex-wrap gap-3">
@@ -391,7 +368,6 @@ const Portfolio = () => {
                     </div>
                   </div>
 
-                  {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     {project.demo !== "#" && (
                       <a href={project.demo} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
@@ -411,7 +387,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Experience Section */}
       <section id="experience" className="py-16 sm:py-24 px-4 sm:px-6 bg-gray-950/50">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Experience</h2>
@@ -429,7 +404,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Let's Connect</h2>
@@ -462,7 +436,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-6 sm:py-8 px-4 sm:px-6 border-t border-gray-800 bg-black">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400 font-light text-sm sm:text-base">
