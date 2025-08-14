@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, Server, Globe, ChevronDown, Menu, X } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code, Database, Server, Globe, ChevronDown, Menu, X, Puzzle, Bell, Chrome } from "lucide-react";
 
 const Portfolio = () => {
   const [codingSeconds, setCodingSeconds] = useState(0);
@@ -31,6 +31,8 @@ const Portfolio = () => {
     { name: "Express.js", icon: Server, color: "text-yellow-400" },
     { name: "React.js", icon: Code, color: "text-cyan-400" },
     { name: "Node.js", icon: Globe, color: "text-emerald-400" },
+    { name: "Web Extensions", icon: Chrome, color: "text-blue-400" },
+    { name: "DSA", icon: Puzzle, color: "text-purple-400" },
   ];
 
   const projects = [
@@ -42,7 +44,7 @@ const Portfolio = () => {
       github: "https://github.com/Mohamed-Salah-222/E-Commerce-App",
       demo: "https://e-commerce-app-neon-eight.vercel.app/",
       features: ["User Authentication & Authorization", "Shopping Cart & Checkout", "Payment Integration", "Admin Dashboard", "Product Reviews & Ratings"],
-      screenshots: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"],
+      screenshots: ["E1.png", "E2.png"],
     },
     {
       title: "Recipe Share App",
@@ -64,18 +66,28 @@ const Portfolio = () => {
       features: ["Smart Study Planning", "Collaborative Note-Taking", "Progress Analytics", "Calendar Integration", "Study Group Management"],
       screenshots: ["Study.png", "Study 2.png"],
     },
+    {
+      title: "Prayer Reminder Extension",
+      description: "A comprehensive Chrome extension that provides prayer time reminders with both web and system notifications, helping users stay connected with their faith throughout the day.",
+      longDescription: "A feature-rich browser extension that automatically calculates accurate prayer times based on user location and provides timely reminders through both browser notifications and system-level alerts. The extension includes customizable notification settings, multiple calculation methods for different regions, and a beautiful interface showing daily prayer schedules.",
+      tech: ["JavaScript", "Chrome APIs", "HTML5", "CSS3", "Geolocation API", "Notification API"],
+      github: "https://github.com/Mohamed-Salah-222/prayer-reminder-extension",
+      demo: "#", // Add demo link when available
+      features: ["Accurate Prayer Time Calculations", "System & Browser Notifications", "Location-Based Timing", "Customizable Reminder Settings", "Beautiful Daily Schedule Interface"],
+      screenshots: ["Prayer1.png"],
+    },
   ];
 
   const experiences = [
     {
       period: "2024 - Present",
       title: "Self-Taught Developer",
-      description: "Building projects and learning MERN stack development through hands-on practice and online resources.",
+      description: "Building projects and learning MERN stack development through hands-on practice and online resources. Specializing in web extensions and applying data structures & algorithms concepts in real-world applications.",
     },
     {
       period: "2024",
       title: "Personal Projects",
-      description: "Developed multiple full-stack applications to strengthen skills in modern web development technologies.",
+      description: "Developed multiple full-stack applications and browser extensions to strengthen skills in modern web development technologies and enhance user productivity.",
     },
   ];
 
@@ -237,11 +249,11 @@ const Portfolio = () => {
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-black mb-6 sm:mb-8 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent text-glow slide-up">Mohamed Salah</h1>
 
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-gray-300 font-medium tracking-wide slide-up" style={{ animationDelay: "0.2s" }}>
-            Full-Stack Web Developer | MERN Stack Specialist
+            Full-Stack Web Developer | MERN Stack Specialist | Extension Developer
           </p>
 
           <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed font-light slide-up px-4" style={{ animationDelay: "0.4s" }}>
-            Passionate junior developer crafting modern web applications with MongoDB, Express.js, React, and Node.js.
+            Passionate junior developer crafting modern web applications with MongoDB, Express.js, React, and Node.js. I also create browser extensions and apply algorithmic thinking to solve complex problems.
             <span className="text-white font-medium"> I bring ideas to life</span> through clean code and intuitive user experiences.
           </p>
 
@@ -271,10 +283,11 @@ const Portfolio = () => {
               Welcome to my digital space! I'm <span className="text-white font-semibold">Mohamed Salah</span>, a passionate junior full-stack developer specializing in the MERN stack. My journey into web development began with curiosity and has evolved into a deep love for creating meaningful digital experiences.
             </p>
             <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-300 mb-6 sm:mb-8 font-light">
-              I thrive on transforming ideas into functional, beautiful web applications. Whether it's building responsive frontends with React or crafting robust backends with Node.js and Express, I approach each project with <span className="text-gray-200 font-semibold">enthusiasm and attention to detail</span>.
+              I thrive on transforming ideas into functional, beautiful web applications. Whether it's building responsive frontends with React, crafting robust backends with Node.js and Express, or developing browser extensions that enhance user productivity, I approach each project with <span className="text-gray-200 font-semibold">enthusiasm and attention to detail</span>.
             </p>
             <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-300 font-light">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or planning my next big idea. I believe in <span className="text-white font-semibold">continuous learning</span> and staying updated with the latest trends in web development.
+              My foundation in <span className="text-white font-semibold">Data Structures and Algorithms</span> helps me write efficient, optimized code and solve complex problems systematically. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or planning my next big idea. I believe in{" "}
+              <span className="text-white font-semibold">continuous learning</span> and staying updated with the latest trends in web development.
             </p>
           </div>
         </div>
@@ -284,7 +297,7 @@ const Portfolio = () => {
       <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 bg-gray-950/50">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-12 sm:mb-20 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Skills & Technologies</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-12 sm:mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-16">
             {skills.map((skill, index) => {
               const IconComponent = skill.icon;
               return (
@@ -299,7 +312,7 @@ const Portfolio = () => {
           <div className="bg-gray-900/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 backdrop-blur-sm border border-gray-800 card-glow">
             <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-white font-display">Additional Technologies</h3>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-              {["JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Git", "JWT", "REST APIs", "Mongoose", "npm"].map((tech) => (
+              {["JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Git", "JWT", "REST APIs", "Mongoose", "npm", "Chrome APIs", "Browser Extensions", "Algorithms", "Problem Solving"].map((tech) => (
                 <span key={tech} className="bg-gray-800/60 hover:bg-gray-700/60 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium border border-gray-700 hover:border-gray-600 transition-all duration-300 cursor-default backdrop-blur-sm">
                   {tech}
                 </span>
@@ -316,25 +329,28 @@ const Portfolio = () => {
 
           <div className="space-y-24 sm:space-y-32">
             {projects.map((project, index) => (
-              <div key={project.title} className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-8 lg:gap-16`} style={{ animationDelay: `${index * 0.2}s` }}>
+              <div key={project.title} className={`flex flex-col ${project.title === "Prayer Reminder Extension" ? "lg:flex-row lg:justify-between" : index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-8 lg:gap-16`} style={{ animationDelay: `${index * 0.2}s` }}>
                 {/* Screenshots Section */}
-                <div className="w-full lg:w-1/2 relative">
+                <div className={`relative ${project.title === "Prayer Reminder Extension" ? "" : "w-full lg:w-1/2"}`}>
                   <div className="relative group">
                     {/* Main Screenshot */}
                     <div className="relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-                      <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                      {/* Conditional aspect ratio and max width based on project */}
+                      <div className={`${project.title === "Prayer Reminder Extension" ? "aspect-[3/4] w-80 mx-auto" : "aspect-video"} bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center`}>
                         <img src={project.screenshots[0]} alt={`${project.title} Screenshot 1`} className="w-full h-full object-cover" />
                         {/* Overlay for demo effect */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                       </div>
                     </div>
 
-                    {/* Secondary Screenshot */}
-                    <div className="absolute -bottom-4 -right-4 w-1/2 overflow-hidden rounded-xl bg-gray-900 border border-gray-800 shadow-xl transform group-hover:scale-110 transition-all duration-500 delay-100">
-                      <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900">
-                        <img src={project.screenshots[1]} alt={`${project.title} Screenshot 2`} className="w-full h-full object-cover" />
+                    {/* Secondary Screenshot - Only show for non-extension projects */}
+                    {project.title !== "Prayer Reminder Extension" && (
+                      <div className="absolute -bottom-4 -right-4 w-1/2 overflow-hidden rounded-xl bg-gray-900 border border-gray-800 shadow-xl transform group-hover:scale-110 transition-all duration-500 delay-100">
+                        <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900">
+                          <img src={project.screenshots[1]} alt={`${project.title} Screenshot 2`} className="w-full h-full object-cover" />
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     {/* Floating Elements */}
                     <div className="absolute -top-4 -left-4 w-8 h-8 bg-white rounded-full opacity-80 group-hover:scale-125 transition-transform duration-300"></div>
@@ -343,7 +359,7 @@ const Portfolio = () => {
                 </div>
 
                 {/* Project Details Section */}
-                <div className="w-full lg:w-1/2 space-y-6">
+                <div className={`space-y-6 ${project.title === "Prayer Reminder Extension" ? "w-full lg:flex-1" : "w-full lg:w-1/2"}`}>
                   {/* Project Title */}
                   <div>
                     <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black font-display text-white mb-4 leading-tight">{project.title}</h3>
@@ -377,10 +393,12 @@ const Portfolio = () => {
 
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
-                      <ExternalLink size={20} className="group-hover:scale-110 transition-transform duration-200" />
-                      <span>Live Demo</span>
-                    </a>
+                    {project.demo !== "#" && (
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+                        <ExternalLink size={20} className="group-hover:scale-110 transition-transform duration-200" />
+                        <span>Live Demo</span>
+                      </a>
+                    )}
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 border-2 border-gray-700 hover:border-white bg-transparent hover:bg-white hover:text-black px-8 py-4 rounded-xl font-bold transition-all duration-300 text-lg">
                       <Github size={20} className="group-hover:scale-110 transition-transform duration-200" />
                       <span>View Code</span>
@@ -428,16 +446,16 @@ const Portfolio = () => {
               rel="noopener noreferrer"
               className="group flex items-center space-x-3 sm:space-x-4 bg-white text-black hover:bg-gray-200 px-6 sm:px-8 py-4 sm:py-5 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
             >
-              <Mail size={20} sm:size={24} className="group-hover:scale-110 transition-transform duration-200" />
+              <Mail size={20} className="group-hover:scale-110 transition-transform duration-200" />
               <span className="font-medium text-sm sm:text-base">midosalah25552@gmail.com</span>
             </a>
 
             <div className="flex space-x-6">
               <a href="https://github.com/Mohamed-Salah-222" target="_blank" rel="noopener noreferrer" className="group bg-gray-900/60 p-4 sm:p-5 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 transform hover:scale-110 border border-gray-800 hover:border-gray-700 card-glow">
-                <Github size={24} sm:size={28} className="group-hover:text-white transition-colors duration-300" />
+                <Github size={24} className="group-hover:text-white transition-colors duration-300" />
               </a>
               <a href="https://www.linkedin.com/in/mohamed-salah-7933a6212/?trk=opento_sprofile_details" target="_blank" rel="noopener noreferrer" className="group bg-gray-900/60 p-4 sm:p-5 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 transform hover:scale-110 border border-gray-800 hover:border-gray-700 card-glow">
-                <Linkedin size={24} sm:size={28} className="group-hover:text-white transition-colors duration-300" />
+                <Linkedin size={24} className="group-hover:text-white transition-colors duration-300" />
               </a>
             </div>
           </div>
