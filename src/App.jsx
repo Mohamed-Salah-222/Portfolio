@@ -71,7 +71,7 @@ const Portfolio = () => {
       description: "A comprehensive Chrome extension that provides prayer time reminders with both web and system notifications, helping users stay connected with their faith throughout the day.",
       longDescription: "A feature-rich browser extension that automatically calculates accurate prayer times based on user location and provides timely reminders through both browser notifications and system-level alerts. The extension includes customizable notification settings, multiple calculation methods for different regions, and a beautiful interface showing daily prayer schedules.",
       tech: ["JavaScript", "Chrome APIs", "HTML5", "CSS3", "Geolocation API", "Notification API"],
-      github: "https://github.com/Mohamed-Salah-222/prayer-reminder-extension",
+      github: "https://github.com/Mohamed-Salah-222/Prayer-Extension",
       demo: "#", // Add demo link when available
       features: ["Accurate Prayer Time Calculations", "System & Browser Notifications", "Location-Based Timing", "Customizable Reminder Settings", "Beautiful Daily Schedule Interface"],
       screenshots: ["Prayer1.png"],
