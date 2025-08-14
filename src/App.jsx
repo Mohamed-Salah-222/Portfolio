@@ -58,10 +58,10 @@ const Portfolio = () => {
       title: "StudyBuddy",
       description: "A comprehensive study companion with tools for creating study plans, taking notes, setting reminders, and tracking progress. Perfect for students and professionals.",
       longDescription: "An all-in-one study management application designed to help students and professionals organize their learning journey. Features include intelligent study scheduling, collaborative note-taking, progress tracking with analytics, and integration with popular calendar apps for seamless workflow management.",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Calendar API"],
+      tech: ["React", "Node.js", "Express", "MongoDB", "Gemini AI", "Agenda.js"],
       github: "https://github.com/Mohamed-Salah-222/StudyBuddy",
       demo: "https://study-buddy-blush.vercel.app/",
-      features: ["Smart Study Planning", "Collaborative Note-Taking", "Progress Analytics", "Calendar Integration", "Study Group Management"],
+      features: ["AI-Powered Chat Assistant", "Smart Study Planning", "Real-time Push Notifications", "Background Job Scheduling", "Discussion Forums"],
       screenshots: ["Study.png", "Study 2.png"],
     },
     {
@@ -79,13 +79,13 @@ const Portfolio = () => {
   const experiences = [
     {
       period: "2024 - Present",
-      title: "Self-Taught Developer",
-      description: "Building projects and learning MERN stack development through hands-on practice and online resources. Specializing in web extensions and applying data structures & algorithms concepts in real-world applications.",
+      title: "Full-Stack Developer",
+      description: "Specialized in MERN stack development with focus on performance optimization and user experience. Built multiple production applications achieving excellent performance scores with sub-second load times and advanced features like AI integration, real-time notifications, and browser extensions.",
     },
     {
       period: "2024",
-      title: "Personal Projects",
-      description: "Developed multiple full-stack applications and browser extensions to strengthen skills in modern web development technologies and enhance user productivity.",
+      title: "Personal Projects & Learning",
+      description: "Developed comprehensive full-stack applications including e-commerce platforms with payment integration, AI-powered study management systems, and browser extensions. Focused on modern web development practices, performance optimization, and scalable architecture design.",
     },
   ];
 
@@ -296,14 +296,32 @@ const Portfolio = () => {
             })}
           </div>
 
-          <div className="bg-gray-900/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 backdrop-blur-sm border border-gray-800 card-glow">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-white font-display">Additional Technologies</h3>
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-              {["JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Git", "JWT", "REST APIs", "Mongoose", "npm", "Chrome APIs", "Browser Extensions", "Algorithms", "Problem Solving"].map((tech) => (
-                <span key={tech} className="bg-gray-800/60 hover:bg-gray-700/60 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium border border-gray-700 hover:border-gray-600 transition-all duration-300 cursor-default backdrop-blur-sm">
-                  {tech}
-                </span>
-              ))}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-gray-900/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 backdrop-blur-sm border border-gray-800 card-glow">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-white font-display">Additional Technologies</h3>
+              <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                {["JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Git", "JWT", "REST APIs", "Mongoose", "npm", "Chrome APIs", "Browser Extensions", "Algorithms", "Problem Solving"].map((tech) => (
+                  <span key={tech} className="bg-gray-800/60 hover:bg-gray-700/60 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium border border-gray-700 hover:border-gray-600 transition-all duration-300 cursor-default backdrop-blur-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gray-900/60 rounded-2xl sm:rounded-3xl p-6 sm:p-10 backdrop-blur-sm border border-gray-800 card-glow">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-white font-display">What I'm Learning</h3>
+              <div className="space-y-4">
+                {[
+                  { name: "Advanced DSA", desc: "Complex algorithms & optimization", color: "border-purple-500 text-purple-300" },
+                  { name: "SQL", desc: "Database design & advanced queries", color: "border-blue-500 text-blue-300" },
+                  { name: "Python", desc: "Backend development & data science", color: "border-yellow-500 text-yellow-300" }
+                ].map((item) => (
+                  <div key={item.name} className={`bg-gray-800/60 border-2 ${item.color} px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gray-700/60`}>
+                    <div className="font-semibold text-white font-display">{item.name}</div>
+                    <div className="text-sm text-gray-400 mt-1">{item.desc}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
