@@ -314,7 +314,7 @@ const Portfolio = () => {
                 {[
                   { name: "Advanced DSA", desc: "Complex algorithms & optimization", color: "border-purple-500 text-purple-300" },
                   { name: "SQL", desc: "Database design & advanced queries", color: "border-blue-500 text-blue-300" },
-                  { name: "Python", desc: "Backend development & data science", color: "border-yellow-500 text-yellow-300" }
+                  { name: "Python", desc: "Backend development & data science", color: "border-yellow-500 text-yellow-300" },
                 ].map((item) => (
                   <div key={item.name} className={`bg-gray-800/60 border-2 ${item.color} px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gray-700/60`}>
                     <div className="font-semibold text-white font-display">{item.name}</div>
@@ -374,7 +374,13 @@ const Portfolio = () => {
                       ))}
                     </ul>
                   </div>
-
+                  {project.title !== "Prayer Reminder Extension" && (
+                    <div className="bg-blue-900/20 border border-blue-700/30 rounded-lg px-4 py-3 flex items-start space-x-3">
+                      <p className="text-sm text-blue-200 leading-relaxed">
+                        <span className="font-medium">Note:</span> This project is hosted on free-tier services and may take 30-50 seconds to load initially. Thanks for your patience!
+                      </p>
+                    </div>
+                  )}
                   <div>
                     <h4 className="text-xl font-bold text-white mb-4 font-display">Built With</h4>
                     <div className="flex flex-wrap gap-3">
