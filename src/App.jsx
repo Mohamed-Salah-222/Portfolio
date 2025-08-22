@@ -222,6 +222,30 @@ const Portfolio = () => {
         .font-mono {
           font-family: "JetBrains Mono", monospace;
         }
+        /* Scrollbar hide for carousel */
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+
+        /* Enhanced Effects */
+        .glow-effect {
+          filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.2));
+        }
+
+        @keyframes fadeInUp {
+          from {
+            transform: translateY(20px);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
 
         /* Enhanced Effects */
         .glow-effect {
@@ -415,7 +439,7 @@ const Portfolio = () => {
 
       {/* Enhanced navbar */}
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-xl z-50 border-b border-gray-800/50 animate-entry animate-slide-down enhanced-glow">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-4 flex justify-between items-center">
           <div className="font-display font-black text-2xl text-white hover:text-gray-300 transition-colors duration-300 cursor-pointer">MS</div>
           <div className="hidden md:flex space-x-8">
             {NAV_LINKS.map((item) => (
@@ -425,20 +449,35 @@ const Portfolio = () => {
               </button>
             ))}
           </div>
-          <button aria-label="Toggle menu" className="md:hidden p-3 rounded-xl bg-gray-900/60 hover:bg-gray-800/60 transition-all duration-300 border border-gray-800 hover:border-gray-700 backdrop-blur-sm smooth-hover" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button aria-label="Toggle menu" className="md:hidden p-2 rounded-xl bg-gray-900/60 hover:bg-gray-800/60 transition-all duration-300 border border-gray-800 hover:border-gray-700 backdrop-blur-sm smooth-hover" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </nav>
         {isMenuOpen && (
-          <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-gray-800/50">
-            <div className="px-4 sm:px-6 py-6 space-y-4">
-              {NAV_LINKS.map((item, index) => (
-                <button key={item} onClick={() => scrollToSection(item)} className="block w-full text-left capitalize font-semibold py-3 text-gray-300 hover:text-white transition-all duration-300 hover:translate-x-2" style={{ animationDelay: `${index * 0.1}s` }}>
-                  {item}
-                </button>
-              ))}
+          <>
+            {/* Backdrop overlay */}
+            <div className="fixed top-16 left-0 right-0 bottom-0 bg-black/60 backdrop-blur-sm z-40 md:hidden" onClick={() => setIsMenuOpen(false)} />
+
+            {/* Compact vertical menu */}
+            <div className="fixed top-19 right-2 z-50 md:hidden">
+              <div className="bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl py-3 px-2 shadow-2xl min-w-[140px]">
+                {NAV_LINKS.map((item, index) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(item)}
+                    className={`block w-full text-center capitalize font-semibold py-3 px-4 rounded-xl transition-all duration-300 text-sm mb-1 last:mb-0 ${activeSection === item ? "bg-white text-black" : "text-gray-300 hover:text-white hover:bg-gray-800/50"}`}
+                    style={{
+                      animationDelay: `${index * 0.05}s`,
+                      animation: "fadeInUp 0.3s ease-out forwards",
+                      opacity: 0,
+                    }}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          </>
         )}
       </header>
 
@@ -447,7 +486,7 @@ const Portfolio = () => {
         <section id="home" ref={sectionRefs.home} className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 relative bg-grid">
           <div className="text-center max-w-6xl mx-auto z-10">
             <div className="mb-12  animate-entry animate-scale-in stagger-1">
-              <div className="w-40 h-40 mx-auto bg-gradient-to-r from-gray-600 via-gray-400 to-gray-600 rounded-full p-1 glow-effect magnetic-hover">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto bg-gradient-to-r from-gray-600 via-gray-400 to-gray-600 rounded-full p-1 glow-effect magnetic-hover">
                 <div className="w-full h-full bg-gray-900 rounded-full overflow-hidden border-2 border-gray-700 relative">
                   {/* Spinner placeholder that fades out */}
                   <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center transition-opacity duration-500" style={{ opacity: imageLoaded ? 0 : 1 }}>
@@ -460,23 +499,23 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black mb-8 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent text-glow animate-entry animate-fade-up stagger-2 leading-none whitespace-nowrap">Mohamed Salah</h1>
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-8 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent text-glow animate-entry animate-fade-up stagger-2 leading-tight sm:leading-none whitespace-normal sm:whitespace-nowrap">Mohamed Salah</h1>
 
             <div className="animate-entry animate-fade-up stagger-3 mb-8">
-              <p className="text-2xl md:text-4xl mb-4 text-gray-200 font-bold tracking-wide">Full-Stack Web Developer</p>
-              <p className="text-lg md:text-xl text-gray-400 font-medium">MERN Stack Specialist</p>
+              <p className="text-xl sm:text-2xl md:text-4xl mb-4 text-gray-200 font-bold tracking-wide">Full-Stack Web Developer</p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 font-medium">MERN Stack Specialist</p>
             </div>
 
-            <p className="text-xl md:text-2xl mb-16 text-gray-300 max-w-4xl mx-auto leading-relaxed animate-entry animate-fade-up stagger-4">
+            <p className="text-lg sm:text-xl md:text-2xl mb-16 text-gray-300 max-w-4xl mx-auto leading-relaxed animate-entry animate-fade-up stagger-4 px-4">
               Passionate junior developer crafting modern web applications with MongoDB, Express.js, React, and Node.js. I also create browser extensions and apply algorithmic thinking to solve complex problems.
               <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"> I bring ideas to life</span> through clean code and intuitive user experiences.
             </p>
 
-            <div className="mb-16 p-10 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl backdrop-blur-lg border border-gray-700/50 card-glow magnetic-hover animate-entry animate-scale-in stagger-5 enhanced-glow">
-              <h3 className="text-3xl font-black mb-6 text-white font-display">🚀 Coding Journey</h3>
-              <p className="text-xl mb-6 text-gray-300">I've been coding for</p>
-              <div className="font-mono text-6xl sm:text-9xl font-black bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent tracking-tight">{formatNumber(codingSeconds)}</div>
-              <p className="text-2xl mt-6 text-gray-300 tracking-wide font-semibold">Seconds</p>
+            <div className="mb-16 p-6 sm:p-10 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl backdrop-blur-lg border border-gray-700/50 card-glow magnetic-hover animate-entry animate-scale-in stagger-5 enhanced-glow">
+              <h3 className="text-2xl sm:text-3xl font-black mb-4 sm:mb-6 text-white font-display">🚀 Coding Journey</h3>
+              <p className="text-lg sm:text-xl mb-4 sm:mb-6 text-gray-300">I've been coding for</p>
+              <div className="font-mono text-4xl sm:text-6xl lg:text-9xl font-black bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent tracking-tight break-all">{formatNumber(codingSeconds)}</div>
+              <p className="text-xl sm:text-2xl mt-4 sm:mt-6 text-gray-300 tracking-wide font-semibold">Seconds</p>
             </div>
 
             <div className="animate-entry animate-fade-up stagger-6">
@@ -491,12 +530,12 @@ const Portfolio = () => {
         {/* Enhanced about section */}
         <AnimatedSection id="about" sectionRef={sectionRefs.about}>
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-display text-5xl sm:text-7xl font-black text-center mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">About Me</h2>
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 lg:mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent px-4">About Me</h2>
             <div className="bg-gradient-to-br from-gray-900/70 to-gray-800/70 rounded-3xl p-10 sm:p-12 backdrop-blur-lg border border-gray-700/50 card-glow hover:border-gray-600/50 transition-all duration-700 magnetic-hover enhanced-glow">
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-300 mb-10">
+              <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-300 mb-8 sm:mb-10">
                 Welcome to my digital space! I'm <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Mohamed Salah</span>, a passionate junior full-stack developer specializing in the MERN stack. My journey into web development began with curiosity and has evolved into a deep love for creating meaningful digital experiences.
               </p>
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-300 mb-10">
+              <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-300 mb-8 sm:mb-10">
                 I thrive on transforming ideas into functional, beautiful web applications. Whether it's building responsive frontends with React, crafting robust backends with Node.js and Express, or developing browser extensions that enhance user productivity, I approach each project with{" "}
                 <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">enthusiasm and attention to detail</span>.
               </p>
@@ -511,42 +550,42 @@ const Portfolio = () => {
         {/* Enhanced skills section */}
         <AnimatedSection id="skills" sectionRef={sectionRefs.skills} className="bg-gray-950/60">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-5xl sm:text-7xl font-black text-center mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">Skills & Technologies</h2>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 lg:mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent px-4">Skills & Technologies</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
               {SKILLS_DATA.map((skill, index) => (
                 <div
                   key={skill.name}
-                  className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-10 rounded-3xl text-center hover:from-gray-800/80 hover:to-gray-700/80 transition-all duration-300 transform hover:scale-105 backdrop-blur-lg border border-gray-700/50 card-glow hover:border-gray-600/50 enhanced-glow"
+                  className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 sm:p-10 rounded-3xl text-center hover:from-gray-800/80 hover:to-gray-700/80 transition-all duration-300 transform hover:scale-105 backdrop-blur-lg border border-gray-700/50 card-glow hover:border-gray-600/50 enhanced-glow"
                   style={{
                     transitionDelay: `${index * 100}ms`,
                     animationDelay: `${index * 0.2}s`,
                   }}
                 >
-                  <skill.icon className={`w-20 h-20 mx-auto mb-8 ${skill.color} group-hover:scale-125 transition-all duration-300 glow-effect`} />
-                  <h3 className="text-2xl font-black font-display text-gray-100 group-hover:text-white transition-colors duration-300">{skill.name}</h3>
+                  <skill.icon className={`w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 ${skill.color} group-hover:scale-125 transition-all duration-300 glow-effect`} />
+                  <h3 className="text-xl sm:text-2xl font-black font-display text-gray-100 group-hover:text-white transition-colors duration-300">{skill.name}</h3>
                 </div>
               ))}
             </div>
 
-            <div className="grid md:grid-cols-2 gap-10">
-              <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-10 backdrop-blur-lg border border-gray-700/50 card-glow magnetic-hover enhanced-glow">
-                <h3 className="text-4xl font-black mb-10 text-center text-white font-display">Additional Technologies</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
+              <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-6 sm:p-10 backdrop-blur-lg border border-gray-700/50 card-glow magnetic-hover enhanced-glow">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6 sm:mb-10 text-center text-white font-display">Additional Technologies</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   {ADDITIONAL_TECH.map((tech, index) => (
-                    <span key={tech} className="bg-gray-800/70 hover:bg-gray-700/70 px-6 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 cursor-default backdrop-blur-sm smooth-hover text-lg" style={{ animationDelay: `${index * 50}ms` }}>
+                    <span key={tech} className="bg-gray-800/70 hover:bg-gray-700/70 px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 cursor-default backdrop-blur-sm smooth-hover text-sm sm:text-base lg:text-lg" style={{ animationDelay: `${index * 50}ms` }}>
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-10 backdrop-blur-lg border border-gray-700/50 card-glow magnetic-hover enhanced-glow">
-                <h3 className="text-4xl font-black mb-10 text-center text-white font-display">What I'm Learning</h3>
+              <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-6 sm:p-10 backdrop-blur-lg border border-gray-700/50 card-glow magnetic-hover enhanced-glow">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6 sm:mb-10 text-center text-white font-display">What I'm Learning</h3>
                 <div className="space-y-6">
                   {LEARNING_DATA.map((item, index) => (
-                    <div key={item.name} className={`bg-gray-800/70 border-2 ${item.color} px-6 py-4 rounded-2xl transition-all duration-500 hover:bg-gray-700/70 magnetic-hover smooth-hover`} style={{ animationDelay: `${index * 100}ms` }}>
-                      <div className="font-bold text-white font-display text-xl">{item.name}</div>
-                      <div className="text-gray-400 mt-2 text-lg">{item.desc}</div>
+                    <div key={item.name} className={`bg-gray-800/70 border-2 ${item.color} px-4 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-500 hover:bg-gray-700/70 magnetic-hover smooth-hover`} style={{ animationDelay: `${index * 100}ms` }}>
+                      <div className="font-bold text-white font-display text-lg sm:text-xl">{item.name}</div>
+                      <div className="text-gray-400 mt-2 text-base sm:text-lg">{item.desc}</div>
                     </div>
                   ))}
                 </div>
@@ -561,9 +600,9 @@ const Portfolio = () => {
             <h2 className="font-display text-5xl sm:text-7xl font-black text-center mb-24 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">Featured Projects</h2>
             <div className="space-y-40">
               {PROJECTS_DATA.map((project, index) => (
-                <div key={project.title} className={`flex flex-col items-center gap-16 ${project.title === "Prayer Reminder Extension" ? "lg:flex-row lg:justify-between" : index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
+                <div key={project.title} className={`flex flex-col items-center gap-8 sm:gap-16 ${project.title === "Prayer Reminder Extension" ? "lg:flex-row lg:justify-between" : index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
                   {/* Project Images */}
-                  <div className={`${project.title === "Prayer Reminder Extension" ? "" : "w-full lg:w-1/2"}`}>
+                  <div className={`${project.title === "Prayer Reminder Extension" ? "w-full sm:w-80" : "w-full lg:w-1/2"}`}>
                     <div className="relative group">
                       <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700/50 shadow-2xl transform group-hover:scale-105 transition-all duration-700 magnetic-hover enhanced-glow ${project.title === "Prayer Reminder Extension" ? "w-80 mx-auto" : ""}`}>
                         <div className={`${project.title === "Prayer Reminder Extension" ? "aspect-[3/4]" : "aspect-video"} bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden`}>
@@ -583,10 +622,10 @@ const Portfolio = () => {
                   </div>
 
                   {/* Project Details */}
-                  <div className={`space-y-8 ${project.title === "Prayer Reminder Extension" ? "w-full lg:flex-1" : "w-full lg:w-1/2"}`}>
-                    <h3 className="text-5xl lg:text-6xl font-black font-display text-white leading-tight">{project.title}</h3>
+                  <div className={`space-y-6 sm:space-y-8 ${project.title === "Prayer Reminder Extension" ? "w-full lg:flex-1" : "w-full lg:w-1/2"}`}>
+                    <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black font-display text-white leading-tight">{project.title}</h3>
 
-                    <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">{project.longDescription}</p>
+                    <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">{project.longDescription}</p>
 
                     <div className="flex flex-wrap gap-3">
                       {project.tech.map((tech, techIndex) => (
@@ -596,15 +635,15 @@ const Portfolio = () => {
                       ))}
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-6 pt-6">
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6">
                       {project.demo !== "#" && (
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-4 bg-white text-black hover:bg-gray-100 px-10 py-5 rounded-2xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl text-xl magnetic-hover">
-                          <ExternalLink size={24} className="group-hover:rotate-45 transition-transform duration-300" />
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 sm:space-x-4 bg-white text-black hover:bg-gray-100 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl text-lg sm:text-xl magnetic-hover">
+                          <ExternalLink size={20} className="sm:w-6 sm:h-6 group-hover:rotate-45 transition-transform duration-300" />
                           <span>Live Demo</span>
                         </a>
                       )}
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-4 border-2 border-gray-600 hover:border-white hover:bg-white hover:text-black px-10 py-5 rounded-2xl font-bold transition-all duration-500 text-xl smooth-hover">
-                        <Github size={24} className="group-hover:rotate-12 transition-transform duration-300" />
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 sm:space-x-4 border-2 border-gray-600 hover:border-white hover:bg-white hover:text-black px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold transition-all duration-500 text-lg sm:text-xl smooth-hover">
+                        <Github size={20} className="sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform duration-300" />
                         <span>View Code</span>
                       </a>
                     </div>
@@ -618,15 +657,15 @@ const Portfolio = () => {
         {/* Enhanced experience section */}
         <AnimatedSection id="experience" sectionRef={sectionRefs.experience} className="bg-gray-950/60">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-display text-5xl sm:text-7xl font-black text-center mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">Experience</h2>
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 lg:mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent px-4">Experience</h2>
             <div className="space-y-10">
               {EXPERIENCES_DATA.map((exp, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-10 backdrop-blur-lg border border-gray-700/50 hover:from-gray-800/80 hover:to-gray-700/80 hover:border-gray-600/50 transition-all duration-700 card-glow magnetic-hover enhanced-glow" style={{ animationDelay: `${index * 200}ms` }}>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
-                    <h3 className="text-3xl font-black text-white font-display mb-3 sm:mb-0">{exp.title}</h3>
-                    <span className="text-gray-300 font-bold font-mono bg-gray-800/60 px-6 py-2 rounded-full border border-gray-600 text-lg backdrop-blur-sm">{exp.period}</span>
+                <div key={index} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-6 sm:p-10 backdrop-blur-lg border border-gray-700/50 hover:from-gray-800/80 hover:to-gray-700/80 hover:border-gray-600/50 transition-all duration-700 card-glow magnetic-hover enhanced-glow" style={{ animationDelay: `${index * 200}ms` }}>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
+                    <h3 className="text-2xl sm:text-3xl font-black text-white font-display mb-3 sm:mb-0">{exp.title}</h3>
+                    <span className="text-gray-300 font-bold font-mono bg-gray-800/60 px-4 sm:px-6 py-2 rounded-full border border-gray-600 text-sm sm:text-lg backdrop-blur-sm">{exp.period}</span>
                   </div>
-                  <p className="text-gray-300 leading-relaxed text-xl">{exp.description}</p>
+                  <p className="text-gray-300 leading-relaxed text-lg sm:text-xl">{exp.description}</p>
                 </div>
               ))}
             </div>
@@ -637,35 +676,35 @@ const Portfolio = () => {
         <AnimatedSection id="contact" sectionRef={sectionRefs.contact}>
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="font-display text-5xl sm:text-7xl font-black mb-16 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">Let's Connect</h2>
-            <p className="text-2xl md:text-3xl mb-20 text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 sm:mb-20 text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
               I'm always excited to discuss new opportunities, collaborate on projects, or just chat about web development.
               <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent block mt-4">Let's build something amazing together!</span>
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
-              <a href="mailto:midosalah25552@gmail.com" className="group flex items-center space-x-5 bg-white text-black hover:bg-gray-100 px-12 py-6 rounded-2xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl w-full sm:w-auto justify-center magnetic-hover text-xl">
-                <Mail size={28} className="group-hover:rotate-12 transition-transform duration-300" />
-                <span>midosalah25552@gmail.com</span>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10">
+              <a href="mailto:midosalah25552@gmail.com" className="group flex items-center space-x-3 sm:space-x-5 bg-white text-black hover:bg-gray-100 px-6 sm:px-12 py-4 sm:py-6 rounded-2xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl w-full sm:w-auto justify-center magnetic-hover text-lg sm:text-xl">
+                <Mail size={24} className="sm:w-7 sm:h-7 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="break-all sm:break-normal">midosalah25552@gmail.com</span>
               </a>
 
-              <div className="flex space-x-8">
+              <div className="flex space-x-6 sm:space-x-8">
                 <a
                   href="https://github.com/Mohamed-Salah-222"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl hover:from-gray-800/80 hover:to-gray-700/80 transition-all duration-500 transform hover:scale-110 border border-gray-700/50 hover:border-gray-600/50 card-glow magnetic-hover backdrop-blur-lg enhanced-glow"
+                  className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-4 sm:p-6 rounded-2xl hover:from-gray-800/80 hover:to-gray-700/80 transition-all duration-500 transform hover:scale-110 border border-gray-700/50 hover:border-gray-600/50 card-glow magnetic-hover backdrop-blur-lg enhanced-glow"
                 >
-                  <Github size={32} className="group-hover:rotate-12 transition-transform duration-300" />
+                  <Github size={28} className="sm:w-8 sm:h-8 group-hover:rotate-12 transition-transform duration-300" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/mohamed-salah-7933a6212/?trk=opento_sprofile_details"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 rounded-2xl hover:from-gray-800/80 hover:to-gray-700/80 transition-all duration-500 transform hover:scale-110 border border-gray-700/50 hover:border-gray-600/50 card-glow magnetic-hover backdrop-blur-lg enhanced-glow"
+                  className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-4 sm:p-6 rounded-2xl hover:from-gray-800/80 hover:to-gray-700/80 transition-all duration-500 transform hover:scale-110 border border-gray-700/50 hover:border-gray-600/50 card-glow magnetic-hover backdrop-blur-lg enhanced-glow"
                 >
-                  <Linkedin size={32} className="group-hover:rotate-12 transition-transform duration-300" />
+                  <Linkedin size={28} className="sm:w-8 sm:h-8 group-hover:rotate-12 transition-transform duration-300" />
                 </a>
               </div>
             </div>
