@@ -27,7 +27,7 @@ const PROJECTS_DATA = [
     github: "https://github.com/Mohamed-Salah-222/E-Commerce-App",
     demo: "https://e-commerce-app-neon-eight.vercel.app/",
     features: ["User Authentication & Authorization", "Shopping Cart & Checkout", "Payment Integration", "Admin Dashboard", "Product Reviews & Ratings"],
-    screenshots: ["E1.png", "E2.png"],
+    screenshots: ["E1.png"],
   },
   {
     title: "Recipe Share App",
@@ -36,7 +36,7 @@ const PROJECTS_DATA = [
     github: "https://github.com/Mohamed-Salah-222/Recipe-App",
     demo: "https://recipe-app-blush-three.vercel.app/",
     features: ["Recipe Sharing & Discovery", "Advanced Search & Filters", "User Profiles & Collections", "Photo Upload & Storage", "Community Ratings & Reviews"],
-    screenshots: ["recipe pic.png", "recipe pic 2.png"],
+    screenshots: ["recipe pic.png"],
   },
   {
     title: "StudyBuddy",
@@ -45,7 +45,7 @@ const PROJECTS_DATA = [
     github: "https://github.com/Mohamed-Salah-222/StudyBuddy",
     demo: "https://study-buddy-blush.vercel.app/",
     features: ["AI-Powered Chat Assistant", "Smart Study Planning", "Real-time Push Notifications", "Background Job Scheduling", "Discussion Forums"],
-    screenshots: ["Study.png", "Study 2.png"],
+    screenshots: ["Study.png"],
   },
   {
     title: "Prayer Reminder Extension",
