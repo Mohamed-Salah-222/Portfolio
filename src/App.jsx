@@ -21,13 +21,13 @@ const LEARNING_DATA = [
 
 const PROJECTS_DATA = [
   {
-    title: "E-Commerce Platform",
-    longDescription: "This comprehensive e-commerce solution features a modern, responsive design with advanced product filtering, secure user authentication using JWT, integrated payment processing with Stripe, and a complete admin dashboard for inventory management. The platform handles everything from user registration to order fulfillment.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
-    github: "https://github.com/Mohamed-Salah-222/E-Commerce-App",
-    demo: "https://e-commerce-app-neon-eight.vercel.app/",
-    features: ["User Authentication & Authorization", "Shopping Cart & Checkout", "Payment Integration", "Admin Dashboard", "Product Reviews & Ratings"],
-    screenshots: ["E1.png"],
+    title: "StudyBuddy",
+    longDescription: "An all-in-one study management application designed to help students and professionals organize their learning journey. Features include intelligent study scheduling, collaborative note-taking, progress tracking with analytics, and integration with popular calendar apps for seamless workflow management.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Gemini AI", "Agenda.js"],
+    github: "https://github.com/Mohamed-Salah-222/StudyBuddy",
+    demo: "https://study-buddy-blush.vercel.app/",
+    features: ["AI-Powered Chat Assistant", "Smart Study Planning", "Real-time Push Notifications", "Background Job Scheduling", "Discussion Forums"],
+    screenshots: ["Study.png"],
   },
   {
     title: "Recipe Share App",
@@ -39,13 +39,13 @@ const PROJECTS_DATA = [
     screenshots: ["recipe pic.png"],
   },
   {
-    title: "StudyBuddy",
-    longDescription: "An all-in-one study management application designed to help students and professionals organize their learning journey. Features include intelligent study scheduling, collaborative note-taking, progress tracking with analytics, and integration with popular calendar apps for seamless workflow management.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Gemini AI", "Agenda.js"],
-    github: "https://github.com/Mohamed-Salah-222/StudyBuddy",
-    demo: "https://study-buddy-blush.vercel.app/",
-    features: ["AI-Powered Chat Assistant", "Smart Study Planning", "Real-time Push Notifications", "Background Job Scheduling", "Discussion Forums"],
-    screenshots: ["Study.png"],
+    title: "E-Commerce Platform",
+    longDescription: "This comprehensive e-commerce solution features a modern, responsive design with advanced product filtering, secure user authentication using JWT, integrated payment processing with Stripe, and a complete admin dashboard for inventory management. The platform handles everything from user registration to order fulfillment.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
+    github: "https://github.com/Mohamed-Salah-222/E-Commerce-App",
+    demo: "https://e-commerce-app-neon-eight.vercel.app/",
+    features: ["User Authentication & Authorization", "Shopping Cart & Checkout", "Payment Integration", "Admin Dashboard", "Product Reviews & Ratings"],
+    screenshots: ["E1.png"],
   },
   {
     title: "Prayer Reminder Extension",
@@ -57,7 +57,6 @@ const PROJECTS_DATA = [
     screenshots: ["Prayer1.png"],
   },
 ];
-
 const EXPERIENCES_DATA = [
   {
     period: "2025 - Present",
