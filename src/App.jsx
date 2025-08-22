@@ -21,13 +21,13 @@ const LEARNING_DATA = [
 
 const PROJECTS_DATA = [
   {
-    title: "StudyBuddy",
-    longDescription: "An all-in-one study management application designed to help students and professionals organize their learning journey. Features include intelligent study scheduling, collaborative note-taking, progress tracking with analytics, and integration with popular calendar apps for seamless workflow management.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Gemini AI", "Agenda.js"],
-    github: "https://github.com/Mohamed-Salah-222/StudyBuddy",
-    demo: "https://study-buddy-blush.vercel.app/",
-    features: ["AI-Powered Chat Assistant", "Smart Study Planning", "Real-time Push Notifications", "Background Job Scheduling", "Discussion Forums"],
-    screenshots: ["Study.png"],
+    title: "E-Commerce Platform",
+    longDescription: "This comprehensive e-commerce solution features a modern, responsive design with advanced product filtering, secure user authentication using JWT, integrated payment processing with Stripe, and a complete admin dashboard for inventory management. The platform handles everything from user registration to order fulfillment.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
+    github: "https://github.com/Mohamed-Salah-222/E-Commerce-App",
+    demo: "https://e-commerce-app-neon-eight.vercel.app/",
+    features: ["User Authentication & Authorization", "Shopping Cart & Checkout", "Payment Integration", "Admin Dashboard", "Product Reviews & Ratings"],
+    screenshots: ["E1.png"],
   },
   {
     title: "Recipe Share App",
@@ -39,13 +39,13 @@ const PROJECTS_DATA = [
     screenshots: ["recipe pic.png"],
   },
   {
-    title: "E-Commerce Platform",
-    longDescription: "This comprehensive e-commerce solution features a modern, responsive design with advanced product filtering, secure user authentication using JWT, integrated payment processing with Stripe, and a complete admin dashboard for inventory management. The platform handles everything from user registration to order fulfillment.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
-    github: "https://github.com/Mohamed-Salah-222/E-Commerce-App",
-    demo: "https://e-commerce-app-neon-eight.vercel.app/",
-    features: ["User Authentication & Authorization", "Shopping Cart & Checkout", "Payment Integration", "Admin Dashboard", "Product Reviews & Ratings"],
-    screenshots: ["E1.png"],
+    title: "StudyBuddy",
+    longDescription: "An all-in-one study management application designed to help students and professionals organize their learning journey. Features include intelligent study scheduling, collaborative note-taking, progress tracking with analytics, and integration with popular calendar apps for seamless workflow management.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Gemini AI", "Agenda.js"],
+    github: "https://github.com/Mohamed-Salah-222/StudyBuddy",
+    demo: "https://study-buddy-blush.vercel.app/",
+    features: ["AI-Powered Chat Assistant", "Smart Study Planning", "Real-time Push Notifications", "Background Job Scheduling", "Discussion Forums"],
+    screenshots: ["Study.png"],
   },
   {
     title: "Prayer Reminder Extension",
@@ -625,7 +625,19 @@ const Portfolio = () => {
                   <div className={`space-y-6 sm:space-y-8 ${project.title === "Prayer Reminder Extension" ? "w-full lg:flex-1" : "w-full lg:w-1/2"}`}>
                     <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black font-display text-white leading-tight">{project.title}</h3>
 
-                    <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">{project.longDescription}</p>
+                    <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8">{project.longDescription}</p>
+
+                    <div className="space-y-6 sm:space-y-8">
+                      <h4 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 font-display">Key Features</h4>
+                      <ul className="space-y-2 sm:space-y-3">
+                        {project.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start space-x-3 sm:space-x-4 text-gray-300">
+                            <span className="text-white mt-1.5 sm:mt-2 text-xs sm:text-sm">▸</span>
+                            <span className="font-light text-base sm:text-lg md:text-xl">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
                     <div className="flex flex-wrap gap-3">
                       {project.tech.map((tech, techIndex) => (
