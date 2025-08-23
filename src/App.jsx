@@ -427,9 +427,9 @@ const Portfolio = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10">
-              <a href="mailto:midosalah25552@gmail.com" className="group flex items-center space-x-3 sm:space-x-5 bg-white text-black hover:bg-gray-100 px-6 sm:px-12 py-4 sm:py-6 rounded-2xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl w-full sm:w-auto justify-center magnetic-hover text-lg sm:text-xl">
+              <a href="mailto:mohamedsalahswe@gmail.com" className="group flex items-center space-x-3 sm:space-x-5 bg-white text-black hover:bg-gray-100 px-6 sm:px-12 py-4 sm:py-6 rounded-2xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl w-full sm:w-auto justify-center magnetic-hover text-lg sm:text-xl">
                 <Mail size={24} className="sm:w-7 sm:h-7 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="break-all sm:break-normal">midosalah25552@gmail.com</span>
+                <span className="break-all sm:break-normal">mohamedsalahswe@gmail.com</span>
               </a>
 
               <div className="flex space-x-6 sm:space-x-8">
