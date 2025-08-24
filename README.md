@@ -6,7 +6,7 @@ Welcome to the source code for my personal developer portfolio — a modern, res
 
 ## 🌐 Live Demo
 
-**🔗 [View Portfolio Website](#)**  
+**🔗 [View Portfolio Website](www.mohamedsalah.dev)**  
 _(Replace `#` with your deployed link)_
 
 ---
@@ -35,17 +35,20 @@ _(Replace `#` with your deployed link)_
 
 ## 🧪 Featured Projects
 
-### 🛒 E-Commerce Platform  
+### 🛒 E-Commerce Platform
+
 > A complete MERN stack platform with authentication, cart, payments, and admin features.  
-**Tech**: React, Node.js, Express, MongoDB, JWT, Stripe
+> **Tech**: React, Node.js, Express, MongoDB, JWT, Stripe
 
-### 🧑‍🍳 Recipe Share App  
+### 🧑‍🍳 Recipe Share App
+
 > A social app for sharing, saving, and exploring food recipes.  
-**Tech**: React, Node.js, Express, MongoDB, Cloudinary
+> **Tech**: React, Node.js, Express, MongoDB, Cloudinary
 
-### 📚 StudyBuddy  
+### 📚 StudyBuddy
+
 > A productivity app with study planners, note tools, and reminder systems.  
-**Tech**: React, Node.js, Express, MongoDB, Calendar API
+> **Tech**: React, Node.js, Express, MongoDB, Calendar API
 
 _You can update links and content in the `projects` array inside `Portfolio.jsx`._
 
