@@ -7,7 +7,6 @@ Welcome to the source code for my personal developer portfolio — a modern, res
 ## 🌐 Live Demo
 
 **🔗 [View Portfolio Website](www.mohamedsalah.dev)**  
-_(Replace `#` with your deployed link)_
 
 ---
 
