@@ -1,31 +1,30 @@
-import { Database, Server, Code, Globe, Chrome, Puzzle } from "lucide-react";
+import { SiMongodb, SiExpress, SiReact, SiNodedotjs, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 export const SKILLS_DATA = [
-  { name: "MongoDB", icon: Database, color: "text-green-400" },
-  { name: "Express.js", icon: Server, color: "text-yellow-400" },
-  { name: "React.js", icon: Code, color: "text-cyan-400" },
-  { name: "Node.js", icon: Globe, color: "text-emerald-400" },
-  { name: "Web Extensions", icon: Chrome, color: "text-blue-400" },
-  { name: "DSA", icon: Puzzle, color: "text-purple-400" },
+  { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+  { name: "Express.js", icon: SiExpress, color: "text-gray-500" }, // Note: Express.js doesn't have a color on its logo
+  { name: "React.js", icon: SiReact, color: "text-cyan-500" },
+  { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+  { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
 ];
-
-export const ADDITIONAL_TECH = ["JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Git", "JWT", "REST APIs", "Mongoose", "npm", "Chrome APIs", "Browser Extensions", "Algorithms", "Problem Solving"];
+export const ADDITIONAL_TECH = ["JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Git", "JWT", "REST APIs", "Mongoose", "npm", "Chrome APIs", "Browser Extensions", "SQL", "PostgreSQL", "Algorithms", "Problem Solving", "Stripe API", "Cloudinary"];
 
 export const LEARNING_DATA = [
   {
-    name: "Next.js",
-    desc: "SSR/SSG, API Routes, and App Router",
-    color: "border-purple-500 text-purple-300", // Kept original purple
+    name: "Docker & Containerization",
+    desc: "Container orchestration and deployment strategies",
+    color: "border-blue-500 text-blue-300",
   },
   {
-    name: "SQL & PostgreSQL",
-    desc: "Relational databases, complex queries, and optimization",
-    color: "border-blue-500 text-blue-300", // Kept original blue
+    name: "AWS & Cloud Services",
+    desc: "Cloud deployment, S3, Lambda, and serverless architecture",
+    color: "border-orange-500 text-orange-300",
   },
   {
-    name: "TypeScript",
-    desc: "Static type checking for scalable applications",
-    color: "border-yellow-500 text-yellow-300", // Kept original yellow
+    name: "Testing & CI/CD",
+    desc: "Jest, React Testing Library, and automated deployment pipelines",
+    color: "border-green-500 text-green-300",
   },
 ];
 
@@ -75,16 +74,18 @@ export const PROJECTS_DATA = [
     ],
   },
 ];
+
 export const EXPERIENCES_DATA = [
   {
-    period: "2025 - Present",
-    title: "Full-Stack Developer",
-    description: "Specialized in MERN stack development with focus on performance optimization and user experience. Built multiple production applications achieving excellent performance scores with sub-second load times and advanced features like AI integration, real-time notifications, and browser extensions.",
+    period: "Recent Projects",
+    title: "Full-Stack Development Portfolio",
+    description:
+      "Built 4 production-ready applications demonstrating end-to-end development skills: AI-powered study management system with real-time notifications, community recipe platform with image uploads, e-commerce solution with payment processing, and browser extension with 1000+ potential users. Implemented complex features like background job scheduling, third-party API integrations, and responsive design patterns.",
   },
   {
-    period: "2025",
-    title: "Personal Projects & Learning",
-    description: "Developed comprehensive full-stack applications including e-commerce platforms with payment integration, AI-powered study management systems, and browser extensions. Focused on modern web development practices, performance optimization, and scalable architecture design.",
+    period: "Technical Foundation",
+    title: "Self-Directed Learning & Skill Building",
+    description: "Completed comprehensive full-stack development curriculum covering MERN stack, data structures & algorithms, and modern development practices. Built strong foundation in database design, API development, authentication systems, and performance optimization. Actively contributed to open-source projects and maintained consistent coding practice with 100+ GitHub commits.",
   },
 ];
 

@@ -207,8 +207,8 @@ const Portfolio = () => {
             </div>
 
             <p className="text-lg sm:text-xl md:text-2xl mb-16 text-gray-300 max-w-4xl mx-auto leading-relaxed animate-entry animate-fade-up [animation-delay:0.4s] px-4">
-              Passionate junior developer crafting modern web applications with MongoDB, Express.js, React, and Node.js. I also create browser extensions and apply algorithmic thinking to solve complex problems.
-              <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"> I bring ideas to life</span> through clean code and intuitive user experiences.
+              "Aspiring full-stack developer passionate about building meaningful web applications using the MERN stack. I've developed several projects including an AI-integrated study platform, a recipe-sharing community, and an e-commerce solution with payment processing. I focus on writing clean, efficient code while continuously learning modern development practices and problem-solving
+              techniques."
             </p>
 
             <div className="mb-16 p-6 sm:p-10 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover animate-entry animate-scale-in [animation-delay:0.5s] enhanced-glow">
@@ -233,16 +233,13 @@ const Portfolio = () => {
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 lg:mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent px-4">About Me</h2>
             <div className="bg-gradient-to-br from-gray-900/70 to-gray-800/70 rounded-3xl p-10 sm:p-12 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] hover:border-gray-600/50 transition-all duration-700 magnetic-hover enhanced-glow">
               <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-300 mb-8 sm:mb-10">
-                Welcome to my digital space! I'm <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Mohamed Salah</span>, a passionate junior full-stack developer specializing in the MERN stack. My journey into web development began with curiosity and has evolved into a deep love for creating meaningful digital experiences.
+                I'm <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Mohamed Salah</span>, a dedicated full-stack developer eager to contribute to a development team. Through self-directed learning and hands-on projects, I've built applications including an AI-integrated study management platform, a community recipe-sharing app, and a
+                comprehensive e-commerce solution with Stripe integration.
               </p>
               <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-300 mb-8 sm:mb-10">
-                I thrive on transforming ideas into functional, beautiful web applications. Whether it's building responsive frontends with React, crafting robust backends with Node.js and Express, or developing browser extensions that enhance user productivity, I approach each project with{" "}
-                <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">enthusiasm and attention to detail</span>.
+                My approach to development is methodical and learning-focused. With a strong foundation in Data Structures and Algorithms, I work to write maintainable, well-structured code. While I'm still growing as a developer, I've successfully tackled challenges like implementing real-time notifications, integrating third-party APIs, and managing complex state in React applications.
               </p>
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-300">
-                My foundation in <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Data Structures and Algorithms</span> helps me write efficient, optimized code and solve complex problems systematically. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or planning my next big idea. I
-                believe in <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">continuous learning</span> and staying updated with the latest trends in web development.
-              </p>
+              <p className="text-xl md:text-2xl leading-relaxed text-gray-300">I stay current with industry trends and have recently expanded my skills to include Next.js, TypeScript, and SQL. I'm actively seeking an opportunity to join a team where I can contribute my current skills while learning from experienced developers."</p>
             </div>
           </div>
         </AnimatedSection>
@@ -284,7 +281,7 @@ const Portfolio = () => {
               </div>
 
               <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-6 sm:p-10 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover enhanced-glow">
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6 sm:mb-10 text-center text-white font-display">What I'm Learning</h3>
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6 sm:mb-10 text-center text-white font-display">Currently Exploring</h3>
                 <div className="space-y-6">
                   {LEARNING_DATA.map((item, index) => (
                     <div key={item.name} className={`bg-gray-800/70 border-2 ${item.color} px-4 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-500 hover:bg-gray-700/70 magnetic-hover transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1`} style={{ animationDelay: `${index * 100}ms` }}>
