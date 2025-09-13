@@ -164,3 +164,11 @@ html {
     transform: translateY(-10px) rotate(2deg);
   }
 }
+@keyframes grid-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(40px, 40px);
+  }
+}

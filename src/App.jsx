@@ -203,13 +203,16 @@ const Portfolio = () => {
 
             <div className="animate-entry animate-fade-up [animation-delay:0.3s] mb-8">
               <p className="text-xl sm:text-2xl md:text-4xl mb-4 text-gray-200 font-bold tracking-wide">Full-Stack Web Developer</p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-400 font-medium">MERN Stack Specialist</p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 font-medium">Specializing in MERN Stack • Next.js • SQL</p>
             </div>
 
-            <p className="text-lg sm:text-xl md:text-2xl mb-16 text-gray-300 max-w-4xl mx-auto leading-relaxed animate-entry animate-fade-up [animation-delay:0.4s] px-4">
-              "Aspiring full-stack developer passionate about building meaningful web applications using the MERN stack. I've developed several projects including an AI-integrated study platform, a recipe-sharing community, and an e-commerce solution with payment processing. I focus on writing clean, efficient code while continuously learning modern development practices and problem-solving
-              techniques."
-            </p>
+            <div className="space-y-6 mb-16 animate-entry animate-fade-up [animation-delay:0.4s] px-4">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-5xl mx-auto">Building meaningful web applications with modern technologies and clean, efficient code.</p>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-5xl mx-auto">
+                From AI-integrated platforms to e-commerce solutions with payment processing—
+                <span className="text-white font-medium"> I turn ideas into reality.</span>
+              </p>
+            </div>
 
             <div className="mb-16 p-6 sm:p-10 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover animate-entry animate-scale-in [animation-delay:0.5s] enhanced-glow">
               <h3 className="text-2xl sm:text-3xl font-black mb-4 sm:mb-6 text-white font-display">🚀 Coding Journey</h3>
@@ -229,17 +232,100 @@ const Portfolio = () => {
 
         {/* Enhanced about section */}
         <AnimatedSection id="about" sectionRef={sectionRefs.about}>
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 lg:mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent px-4">About Me</h2>
-            <div className="bg-gradient-to-br from-gray-900/70 to-gray-800/70 rounded-3xl p-10 sm:p-12 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] hover:border-gray-600/50 transition-all duration-700 magnetic-hover enhanced-glow">
-              <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-300 mb-8 sm:mb-10">
-                I'm <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Mohamed Salah</span>, a dedicated full-stack developer eager to contribute to a development team. Through self-directed learning and hands-on projects, I've built applications including an AI-integrated study management platform, a community recipe-sharing app, and a
-                comprehensive e-commerce solution with Stripe integration.
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+              {/* Personal Story Card */}
+              <div className="bg-gradient-to-br from-gray-900/70 to-gray-800/70 rounded-3xl p-8 sm:p-10 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] hover:border-gray-600/50 transition-all duration-700 magnetic-hover enhanced-glow">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-white to-gray-300 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-black font-black text-xl">👨‍💻</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-black text-white font-display">My Journey</h3>
+                </div>
+                <p className="text-lg sm:text-xl leading-relaxed text-gray-300 mb-6">Started coding in January 2025 and haven't looked back since. What began as curiosity quickly became a passion for solving real-world problems through code.</p>
+                <p className="text-lg sm:text-xl leading-relaxed text-gray-300">I thrive on turning complex challenges into elegant solutions, whether it's building an AI-integrated study platform or crafting seamless e-commerce experiences.</p>
+              </div>
+
+              {/* Technical Approach Card */}
+              <div className="bg-gradient-to-br from-gray-900/70 to-gray-800/70 rounded-3xl p-8 sm:p-10 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] hover:border-gray-600/50 transition-all duration-700 magnetic-hover enhanced-glow">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-white to-gray-300 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-black font-black text-xl">⚡</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-black text-white font-display">How I Build</h3>
+                </div>
+                <p className="text-lg sm:text-xl leading-relaxed text-gray-300 mb-6">Clean, maintainable code isn't just a preference—it's a philosophy. Every project starts with solid architecture and ends with seamless user experience.</p>
+                <p className="text-lg sm:text-xl leading-relaxed text-gray-300">From implementing real-time features to integrating payment systems, I tackle each technical challenge with methodical problem-solving and attention to detail.</p>
+              </div>
+            </div>
+
+            {/* Current Focus - Full Width Card */}
+            <div className="bg-gradient-to-br from-gray-900/70 to-gray-800/70 rounded-3xl p-8 sm:p-12 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] hover:border-gray-600/50 transition-all duration-700 magnetic-hover enhanced-glow">
+              <div className="text-center mb-8">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-300 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-black font-black text-2xl">🚀</span>
+                  </div>
+                  <h3 className="text-3xl sm:text-4xl font-black text-white font-display">What's Next</h3>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="text-center">
+                  <h4 className="text-xl font-bold text-white mb-3 font-display">Recently Learned</h4>
+                  <div className="space-y-2">
+                    <span className="block bg-gray-800/60 px-4 py-2 rounded-lg border border-gray-600 text-gray-300">Next.js & TypeScript</span>
+                    <span className="block bg-gray-800/60 px-4 py-2 rounded-lg border border-gray-600 text-gray-300">SQL & Database Design</span>
+                    <span className="block bg-gray-800/60 px-4 py-2 rounded-lg border border-gray-600 text-gray-300">Advanced React Patterns</span>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <h4 className="text-xl font-bold text-white mb-3 font-display">Recent Achievements</h4>
+                  <div className="space-y-2 text-gray-300 inline-block text-left">
+                    <p className="text-sm flex items-start">
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Built AI Resume tracking & review system
+                    </p>
+                    <p className="text-sm flex items-start">
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Created AI-powered study platform
+                    </p>
+                    <p className="text-sm flex items-start">
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Implemented Stripe payment integration
+                    </p>
+                    <p className="text-sm flex items-start">
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Deployed full-stack applications
+                    </p>
+                    <p className="text-sm flex items-start">
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Mastered React state management
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <h4 className="text-xl font-bold text-white mb-3 font-display">Looking For</h4>
+                  <div className="space-y-2 text-gray-300 inline-block text-left">
+                    <p className="text-sm flex items-start">
+                      <span className="mr-2 mt-0.5">🎯</span> Full-stack development role
+                    </p>
+                    <p className="text-sm flex items-start">
+                      <span className="mr-2 mt-0.5">🤝</span> Collaborative team environment
+                    </p>
+                    <p className="text-sm flex items-start">
+                      <span className="mr-2 mt-0.5">📈</span> Growth opportunities
+                    </p>
+                    <p className="text-sm flex items-start">
+                      <span className="mr-2 mt-0.5">💡</span> Challenging projects
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xl md:text-2xl leading-relaxed text-gray-300 text-center">
+                Ready to contribute to a team that values innovation, clean code, and continuous learning.
+                <span className="text-white font-semibold block mt-2">Let's build something amazing together.</span>
               </p>
-              <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-300 mb-8 sm:mb-10">
-                My approach to development is methodical and learning-focused. With a strong foundation in Data Structures and Algorithms, I work to write maintainable, well-structured code. While I'm still growing as a developer, I've successfully tackled challenges like implementing real-time notifications, integrating third-party APIs, and managing complex state in React applications.
-              </p>
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-300">I stay current with industry trends and have recently expanded my skills to include Next.js, TypeScript, and SQL. I'm actively seeking an opportunity to join a team where I can contribute my current skills while learning from experienced developers."</p>
             </div>
           </div>
         </AnimatedSection>
@@ -248,7 +334,9 @@ const Portfolio = () => {
         <AnimatedSection id="skills" sectionRef={sectionRefs.skills} className="bg-gray-950/60">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 lg:mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent px-4">Skills & Technologies</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
+
+            {/* Main Skills Grid - Add Next.js, TypeScript, SQL here */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-20">
               {SKILLS_DATA.map((skill, index) => (
                 <div
                   key={skill.name}
@@ -264,37 +352,97 @@ const Portfolio = () => {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
-              <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-6 sm:p-10 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover enhanced-glow">
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6 sm:mb-10 text-center text-white font-display">Additional Technologies</h3>
-                <div className="flex flex-wrap justify-center gap-4">
-                  {ADDITIONAL_TECH.map((tech, index) => (
-                    <span
-                      key={tech}
-                      className="bg-gray-800/70 hover:bg-gray-700/70 px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 cursor-default backdrop-blur-sm transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1 text-sm sm:text-base lg:text-lg"
-                      style={{ animationDelay: `${index * 50}ms` }}
-                    >
-                      {tech}
-                    </span>
-                  ))}
+            {/* Reorganized Bottom Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              {/* Core Tech Stack - Organized by Category */}
+              <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-8 sm:p-10 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover enhanced-glow">
+                <h3 className="text-2xl sm:text-3xl font-black mb-8 text-center text-white font-display">Core Tech Stack</h3>
+
+                <div className="space-y-8">
+                  {/* Frontend */}
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-200 mb-4 flex items-center">
+                      <Globe className="w-5 h-5 mr-2 text-blue-400" />
+                      Frontend
+                    </h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">React</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Next.js</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">TypeScript</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Tailwind CSS</span>
+                    </div>
+                  </div>
+
+                  {/* Backend */}
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-200 mb-4 flex items-center">
+                      <Server className="w-5 h-5 mr-2 text-green-400" />
+                      Backend
+                    </h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Node.js</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Express.js</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">REST APIs</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">JWT Auth</span>
+                    </div>
+                  </div>
+
+                  {/* Database */}
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-200 mb-4 flex items-center">
+                      <Database className="w-5 h-5 mr-2 text-purple-400" />
+                      Database
+                    </h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">MongoDB</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">SQL</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Mongoose</span>
+                      <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Prisma</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-6 sm:p-10 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover enhanced-glow">
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6 sm:mb-10 text-center text-white font-display">Currently Exploring</h3>
-                <div className="space-y-6">
-                  {LEARNING_DATA.map((item, index) => (
-                    <div key={item.name} className={`bg-gray-800/70 border-2 ${item.color} px-4 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-500 hover:bg-gray-700/70 magnetic-hover transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1`} style={{ animationDelay: `${index * 100}ms` }}>
-                      <div className="font-bold text-white font-display text-lg sm:text-xl">{item.name}</div>
-                      <div className="text-gray-400 mt-2 text-base sm:text-lg">{item.desc}</div>
+              {/* Tools & Expanding Into */}
+              <div className="space-y-8">
+                {/* Development Tools */}
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-8 sm:p-10 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover enhanced-glow">
+                  <h3 className="text-2xl sm:text-3xl font-black mb-8 text-center text-white font-display">Development Tools</h3>
+                  <div className="grid grid-cols-3 gap-3">
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Git & GitHub</span>
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">VS Code</span>
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Cursor</span>
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Postman</span>
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Vercel</span>
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Render</span>
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Clerk Auth</span>
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">Assembly AI</span>
+                    <span className="bg-gray-800/70 hover:bg-gray-700/70 px-4 py-3 rounded-xl font-semibold border border-gray-600 hover:border-gray-500 transition-all duration-300 text-center text-sm hover:-translate-y-1">ShadCN UI</span>
+                  </div>
+                </div>
+
+                {/* Expanding Into */}
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl p-8 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover enhanced-glow">
+                  <h3 className="text-2xl font-black mb-6 text-center text-white font-display">Expanding Into</h3>
+                  <div className="space-y-4">
+                    <div className="bg-gray-800/70 border-2 border-blue-500/50 px-4 py-3 rounded-2xl transition-all duration-500 hover:bg-gray-700/70 hover:border-blue-400/70 hover:-translate-y-1">
+                      <div className="font-bold text-white font-display text-lg">Docker & DevOps</div>
+                      <div className="text-gray-400 mt-1 text-sm">Containerization and deployment pipelines</div>
                     </div>
-                  ))}
+                    <div className="bg-gray-800/70 border-2 border-green-500/50 px-4 py-3 rounded-2xl transition-all duration-500 hover:bg-gray-700/70 hover:border-green-400/70 hover:-translate-y-1">
+                      <div className="font-bold text-white font-display text-lg">AWS & Cloud Services</div>
+                      <div className="text-gray-400 mt-1 text-sm">Scalable cloud infrastructure</div>
+                    </div>
+                    <div className="bg-gray-800/70 border-2 border-purple-500/50 px-4 py-3 rounded-2xl transition-all duration-500 hover:bg-gray-700/70 hover:border-purple-400/70 hover:-translate-y-1">
+                      <div className="font-bold text-white font-display text-lg">GraphQL & Advanced APIs</div>
+                      <div className="text-gray-400 mt-1 text-sm">Modern data fetching solutions</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </AnimatedSection>
-
         {/* Enhanced projects section */}
         <AnimatedSection id="projects" sectionRef={sectionRefs.projects}>
           <div className="max-w-7xl mx-auto">

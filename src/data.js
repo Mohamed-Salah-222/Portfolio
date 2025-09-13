@@ -1,12 +1,14 @@
-import { SiMongodb, SiExpress, SiReact, SiNodedotjs, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { SiMongodb, SiExpress, SiReact, SiNodedotjs, SiNextdotjs, SiTailwindcss, SiTypescript, SiMysql } from "react-icons/si";
 
 export const SKILLS_DATA = [
   { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
-  { name: "Express.js", icon: SiExpress, color: "text-gray-500" }, // Note: Express.js doesn't have a color on its logo
+  { name: "Express.js", icon: SiExpress, color: "text-gray-500" },
   { name: "React.js", icon: SiReact, color: "text-cyan-500" },
   { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
   { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
+  { name: "SQL", icon: SiMysql, color: "text-blue-600" }, // Using MySQL icon for SQL
 ];
 export const ADDITIONAL_TECH = ["JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Next.js", "Git", "JWT", "REST APIs", "Mongoose", "npm", "Chrome APIs", "Browser Extensions", "SQL", "PostgreSQL", "Algorithms", "Problem Solving", "Stripe API", "Cloudinary"];
 
@@ -38,6 +40,21 @@ export const PROJECTS_DATA = [
     features: ["AI-Powered Chat Assistant", "Smart Study Planning", "Real-time Push Notifications", "Background Job Scheduling", "Discussion Forums"],
     screenshots: ["Study.png"],
     keyAchievements: ["Integrated Google's Gemini AI API to provide contextual, real-time answers to user questions based on their study materials.", "Solved complex background job scheduling by implementing Agenda.js to reliably send timed notifications and reminders.", "Designed a efficient MongoDB schema to handle user data, study sessions, notes, and AI chat history in a scalable way."],
+  },
+  {
+    title: "Resumind",
+    longDescription: "An AI-powered resume analyzer that provides detailed feedback, ATS scores, and tailored improvement suggestions based on job descriptions. Built with a modern frontend, serverless backend, and cloud-powered file management for zero infrastructure costs.",
+    tech: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "React Router v7", "Puter.js", "Claude AI", "react-dropzone", "pdf.js"],
+    github: "https://github.com/Mohamed-Salah-222/AI-Resume-",
+    demo: "https://ai-resume-taupe-omega.vercel.app/",
+    features: ["AI-Powered Resume Analysis", "ATS Score Calculation", "Job-Specific Feedback", "Detailed Resume Scoring (ATS, Tone, Content, Skills)", "Visual Resume Preview (PDF → Thumbnails)", "Authentication via Puter.js", "Cloud File Management"],
+    screenshots: ["resume.png"],
+    keyAchievements: [
+      "Implemented Claude AI integration to analyze resumes and provide tailored feedback.",
+      "Built a secure file storage and authentication system using Puter.js for a fully serverless backend.",
+      "Designed responsive UI with React, Tailwind CSS, and Zustand for smooth state management and user experience.",
+      "Converted PDF resumes into image previews using pdf.js for fast client-side rendering.",
+    ],
   },
   {
     title: "Recipe Share App",
