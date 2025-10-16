@@ -207,11 +207,7 @@ const Portfolio = () => {
             </div>
 
             <div className="space-y-6 mb-16 animate-entry animate-fade-up [animation-delay:0.4s] px-4">
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-5xl mx-auto">Building meaningful web applications with modern technologies and clean, efficient code.</p>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-5xl mx-auto">
-                From AI-integrated platforms to e-commerce solutions with payment processing—
-                <span className="text-white font-medium"> I turn ideas into reality.</span>
-              </p>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-5xl mx-auto">I solve real problems with code. From AI-integrated study platforms handling 1000+ daily reminders to e-commerce systems processing payments reliably. I build features that actually work at scale</p>
             </div>
 
             <div className="mb-16 p-6 sm:p-10 bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-3xl backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] magnetic-hover animate-entry animate-scale-in [animation-delay:0.5s] enhanced-glow">
@@ -244,8 +240,9 @@ const Portfolio = () => {
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-black text-white font-display">My Journey</h3>
                 </div>
-                <p className="text-lg sm:text-xl leading-relaxed text-gray-300 mb-6">Started coding in January 2025 and haven't looked back since. What began as curiosity quickly became a passion for solving real-world problems through code.</p>
-                <p className="text-lg sm:text-xl leading-relaxed text-gray-300">I thrive on turning complex challenges into elegant solutions, whether it's building an AI-integrated study platform or crafting seamless e-commerce experiences.</p>
+                <p className="text-lg sm:text-xl leading-relaxed text-gray-300 mb-6">
+                  Started coding in January 2025 with one goal: build things people actually use. Not portfolio pieces. Not tutorial clones. Real applications solving real problems. That's why my projects have actual users (my friends, real test cases). Why I obsess over reliability. Why I care about code that teammates can understand.
+                </p>
               </div>
 
               {/* Technical Approach Card */}
@@ -256,8 +253,9 @@ const Portfolio = () => {
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-black text-white font-display">How I Build</h3>
                 </div>
-                <p className="text-lg sm:text-xl leading-relaxed text-gray-300 mb-6">Clean, maintainable code isn't just a preference—it's a philosophy. Every project starts with solid architecture and ends with seamless user experience.</p>
-                <p className="text-lg sm:text-xl leading-relaxed text-gray-300">From implementing real-time features to integrating payment systems, I tackle each technical challenge with methodical problem-solving and attention to detail.</p>
+                <p className="text-lg sm:text-xl leading-relaxed text-gray-300 mb-6">
+                  Clean code isn't just prettier—it's faster to fix bugs in, easier for teams to collaborate on, and cheaper to maintain. When I built StudyBuddy, I separated concerns from day one. When background jobs needed to run reliably, I didn't hack a solution—I implemented Agenda.js properly. This thinking is baked into everything I write.
+                </p>
               </div>
             </div>
 
@@ -286,19 +284,19 @@ const Portfolio = () => {
                   <h4 className="text-xl font-bold text-white mb-3 font-display">Recent Achievements</h4>
                   <div className="space-y-2 text-gray-300 inline-block text-left">
                     <p className="text-sm flex items-start">
-                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Built AI Resume tracking & review system
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Built production systems handling concurrent users without crashes
                     </p>
                     <p className="text-sm flex items-start">
-                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Created AI-powered study platform
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Integrated external APIs (Gemini AI, Stripe, Cloudinary) reliably
                     </p>
                     <p className="text-sm flex items-start">
-                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Implemented Stripe payment integration
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Implemented background job systems for time-critical operations
                     </p>
                     <p className="text-sm flex items-start">
-                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Deployed full-stack applications
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Designed MongoDB schemas that scale without data corruption
                     </p>
                     <p className="text-sm flex items-start">
-                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Mastered React state management
+                      <span className="text-green-400 mr-2 mt-0.5">✅</span> Deployed full-stack applications and kept them running
                     </p>
                   </div>
                 </div>
@@ -307,16 +305,16 @@ const Portfolio = () => {
                   <h4 className="text-xl font-bold text-white mb-3 font-display">Looking For</h4>
                   <div className="space-y-2 text-gray-300 inline-block text-left">
                     <p className="text-sm flex items-start">
-                      <span className="mr-2 mt-0.5">🎯</span> Full-stack development role
+                      <span className="mr-2 mt-0.5">🎯</span> A team that ships real features, not endless refactoring
                     </p>
                     <p className="text-sm flex items-start">
-                      <span className="mr-2 mt-0.5">🤝</span> Collaborative team environment
+                      <span className="mr-2 mt-0.5">🤝</span> Mentorship from senior developers on architectural patterns
                     </p>
                     <p className="text-sm flex items-start">
-                      <span className="mr-2 mt-0.5">📈</span> Growth opportunities
+                      <span className="mr-2 mt-0.5">📈</span> Projects where my code directly impacts users
                     </p>
                     <p className="text-sm flex items-start">
-                      <span className="mr-2 mt-0.5">💡</span> Challenging projects
+                      <span className="mr-2 mt-0.5">💡</span> Room to own features end-to-end
                     </p>
                   </div>
                 </div>
@@ -331,23 +329,30 @@ const Portfolio = () => {
         </AnimatedSection>
 
         {/* Enhanced skills section */}
+        {/* Enhanced skills section */}
         <AnimatedSection id="skills" sectionRef={sectionRefs.skills} className="bg-gray-950/60">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 lg:mb-20 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent px-4">Skills & Technologies</h2>
 
-            {/* Main Skills Grid - Add Next.js, TypeScript, SQL here */}
+            {/* Main Skills Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-20">
               {SKILLS_DATA.map((skill, index) => (
                 <div
                   key={skill.name}
-                  className="group bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 sm:p-10 rounded-3xl text-center hover:from-gray-800/80 hover:to-gray-700/80 transition-all duration-300 transform hover:scale-105 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] hover:border-gray-600/50 enhanced-glow"
+                  className="group relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 sm:p-10 rounded-3xl text-center hover:from-gray-800/80 hover:to-gray-700/80 transition-all duration-300 transform hover:scale-105 backdrop-blur-lg border border-gray-700/50 shadow-[0_8px_32px_rgba(255,255,255,0.08)] hover:border-gray-600/50 enhanced-glow cursor-pointer"
                   style={{
                     transitionDelay: `${index * 100}ms`,
                     animationDelay: `${index * 0.2}s`,
                   }}
                 >
+                  {/* Skill Icon and Name */}
                   <skill.icon className={`w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 ${skill.color} group-hover:scale-125 transition-all duration-300 drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]`} />
-                  <h3 className="text-xl sm:text-2xl font-black font-display text-gray-100 group-hover:text-white transition-colors duration-300">{skill.name}</h3>
+                  <h3 className="text-xl sm:text-2xl font-black font-display text-gray-100 group-hover:text-white transition-colors duration-300 mb-4">{skill.name}</h3>
+
+                  {/* Hover Description */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-6 sm:p-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100 backdrop-blur-lg border border-gray-600/50">
+                    <p className="text-gray-200 text-sm sm:text-base leading-relaxed font-light text-center">{skill.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -452,89 +457,96 @@ const Portfolio = () => {
                 const isExpanded = expandedProjects[project.title] || false;
 
                 return (
-                  <div key={project.title} className={`flex flex-col items-center gap-8 sm:gap-16 ${project.title === "Prayer Reminder Extension" ? "lg:flex-row lg:justify-between" : index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
-                    {/* Project Images */}
-                    <div className={`${project.title === "Prayer Reminder Extension" ? "w-full sm:w-80" : "w-full lg:w-1/2"}`}>
+                  <div key={project.title} className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+                    {/* Left Column - Visual & Interactive Elements */}
+                    <div className="w-full lg:w-2/5 space-y-8">
+                      {/* Project Image */}
                       <div className="relative group">
-                        <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700/50 shadow-2xl transform group-hover:scale-105 transition-all duration-700 magnetic-hover shadow-[0_0_20px_rgba(255,255,255,0.1),inset_0_1px_0_rgba(255,255,255,0.1)] ${project.title === "Prayer Reminder Extension" ? "w-80 mx-auto" : ""}`}>
-                          <div className={`${project.title === "Prayer Reminder Extension" ? "aspect-[3/4]" : "aspect-video"} bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden`}>
-                            <img src={project.screenshots[0]} alt={`${project.title} Screenshot 1`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700/50 shadow-2xl transform group-hover:scale-105 transition-all duration-700 magnetic-hover shadow-[0_0_20px_rgba(255,255,255,0.1),inset_0_1px_0_rgba(255,255,255,0.1)]">
+                          <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden">
+                            <img src={project.screenshots[0]} alt={`${project.title} Screenshot`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                           </div>
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
-                        {project.screenshots[1] && (
-                          <div className="absolute -bottom-6 -right-6 w-1/2 overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700/50 shadow-2xl transform group-hover:scale-110 transition-all duration-700 delay-200 shadow-[0_0_20px_rgba(255,255,255,0.1),inset_0_1px_0_rgba(255,255,255,0.1)]">
-                            <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden">
-                              <img src={project.screenshots[1]} alt={`${project.title} Screenshot 2`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            </div>
-                          </div>
-                        )}
                       </div>
-                    </div>
 
-                    {/* Project Details */}
-                    <div className={`space-y-6 sm:space-y-8 ${project.title === "Prayer Reminder Extension" ? "w-full lg:flex-1" : "w-full lg:w-1/2"}`}>
-                      <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black font-display text-white leading-tight">{project.title}</h3>
-
-                      <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8">{project.longDescription}</p>
-
-                      <div className="space-y-6 sm:space-y-8">
-                        <h4 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 font-display">Key Features</h4>
-                        <ul className="space-y-2 sm:space-y-3">
+                      {/* Key Features */}
+                      <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 rounded-2xl p-6 border border-gray-700/40 backdrop-blur-sm">
+                        <h4 className="text-xl font-bold text-white mb-4 font-display">✨ Key Features</h4>
+                        <ul className="space-y-3">
                           {project.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-start space-x-3 sm:space-x-4 text-gray-300">
-                              <span className="text-white mt-1.5 sm:mt-2 text-xs sm:text-sm">▸</span>
-                              <span className="font-light text-base sm:text-lg md:text-xl">{feature}</span>
+                            <li key={featureIndex} className="flex items-start space-x-3 text-gray-300">
+                              <span className="text-white mt-1.5 text-sm">▸</span>
+                              <span className="font-light text-base leading-relaxed">{feature}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
+                      {/* Tech Stack - Back on left side */}
+                      <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 rounded-2xl p-6 border border-gray-700/40 backdrop-blur-sm">
+                        <h4 className="text-xl font-bold text-white mb-4 font-display">🛠️ Tech Stack</h4>
+                        <div className="flex flex-wrap gap-3">
+                          {project.tech.map((tech, techIndex) => (
+                            <span key={tech} className="bg-gray-800/70 text-gray-200 px-4 py-2 rounded-xl font-medium border border-gray-600 backdrop-blur-sm transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1" style={{ animationDelay: `${techIndex * 50}ms` }}>
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
                       {/* Key Achievements - Expandable Section */}
                       <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 rounded-2xl p-6 border border-gray-700/40 backdrop-blur-sm">
                         <button onClick={() => toggleProject(project.title)} className="w-full flex items-center justify-between text-left group">
-                          <h4 className="text-lg sm:text-xl font-bold text-white font-display group-hover:text-gray-100 transition-colors duration-300">🏆 Key Technical Achievements</h4>
+                          <h4 className="text-lg font-bold text-white font-display group-hover:text-gray-100 transition-colors duration-300">🏆 Key Technical Achievements</h4>
                           <div className={`transform transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}>
                             <ChevronDown size={20} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
                           </div>
                         </button>
 
-                        <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? "max-h-96 opacity-100 mt-6" : "max-h-0 opacity-0"}`}>
-                          <ul className="space-y-4">
+                        <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"}`}>
+                          <ul className="space-y-3">
                             {project.keyAchievements.map((achievement, achievementIndex) => (
                               <li key={achievementIndex} className="flex items-start space-x-3 text-gray-300">
                                 <span className="text-yellow-400 mt-1 text-sm font-bold">✦</span>
-                                <span className="font-light text-sm sm:text-base leading-relaxed">{achievement}</span>
+                                <span className="font-light text-sm leading-relaxed">{achievement}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
                       </div>
+                    </div>
 
-                      <div className="flex flex-wrap gap-3">
-                        {project.tech.map((tech, techIndex) => (
-                          <span key={tech} className="bg-gray-800/70 text-gray-200 px-4 py-2 rounded-xl font-medium border border-gray-600 backdrop-blur-sm transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1" style={{ animationDelay: `${techIndex * 50}ms` }}>
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                    {/* Right Column - Project Description & Action Buttons */}
+                    <div className="w-full lg:w-3/5">
+                      <div className="sticky top-24">
+                        {/* Project Title */}
+                        <h3 className="text-4xl lg:text-5xl xl:text-6xl font-black font-display text-white leading-tight mb-8">{project.title}</h3>
 
-                      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6">
-                        {project.demo !== "#" && (
-                          <a href={project.demo} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 sm:space-x-4 bg-white text-black hover:bg-gray-100 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl text-lg sm:text-xl magnetic-hover">
-                            <ExternalLink size={20} className="sm:w-6 sm:h-6 group-hover:rotate-45 transition-transform duration-300" />
-                            <span>Live Demo</span>
+                        {/* Long Description */}
+                        <div className="prose prose-invert max-w-none mb-8">
+                          <div className="text-lg lg:text-xl text-gray-300 leading-relaxed space-y-6">
+                            {project.longDescription.split("\n\n").map((paragraph, index) => (
+                              <p key={index} className="leading-8 text-gray-300">
+                                {paragraph}
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Action Buttons - Moved to right side under description */}
+                        <div className="flex flex-col sm:flex-row gap-4">
+                          {project.demo !== "#" && (
+                            <a href={project.demo} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 bg-white text-black hover:bg-gray-100 px-6 py-4 rounded-2xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl text-base magnetic-hover">
+                              <ExternalLink size={20} className="group-hover:rotate-45 transition-transform duration-300" />
+                              <span>Live Demo</span>
+                            </a>
+                          )}
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center space-x-3 border-2 border-gray-600 hover:border-white hover:bg-white hover:text-black px-6 py-4 rounded-2xl font-bold transition-all duration-500 text-base transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1">
+                            <Github size={20} className="group-hover:rotate-12 transition-transform duration-300" />
+                            <span>View Code</span>
                           </a>
-                        )}
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group flex items-center justify-center space-x-3 sm:space-x-4 border-2 border-gray-600 hover:border-white hover:bg-white hover:text-black px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold transition-all duration-500 text-lg sm:text-xl transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-1"
-                        >
-                          <Github size={20} className="sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform duration-300" />
-                          <span>View Code</span>
-                        </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -568,7 +580,7 @@ const Portfolio = () => {
             <h2 className="font-display text-5xl sm:text-7xl font-black mb-16 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">Let's Connect</h2>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 sm:mb-20 text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
               I'm always excited to discuss new opportunities, collaborate on projects, or just chat about web development.
-              <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent block mt-4">Let's build something amazing together!</span>
+              <span className="text-white font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent block mt-4">Open to: Full-time roles, internships, or contract work starting immediately.</span>
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10">
