@@ -72,6 +72,29 @@ export const LEARNING_DATA = [
 
 export const PROJECTS_DATA = [
   {
+    title: "Virtual Kitchen",
+    longDescription: `I got tired of wasting food and wondering "what can I cook with this?" So I built Virtual Kitchen: snap a photo of your fridge, AI extracts every ingredient, and you get instant recipe suggestions based on what you actually have.
+
+The technical challenge: How do you make AI understand messy kitchen photos? Random items, bad lighting, handwritten labels. I integrated OpenAI's GPT-4 Vision API to analyze images and extract ingredients with quantities and categories. Built smart duplicate detection so "2 tomatoes" and "tomato" don't create separate entries.
+
+For recipes: AI generates personalized suggestions matching your inventory with dietary filters (Halal, Vegan, Keto). Shows match percentages so you know if you're missing key ingredients. Tracks cooking history and automatically deducts used ingredients.
+
+The hard part: Real-time inventory updates across devices without data conflicts. I used MongoDB transactions with optimistic UI updates. Added automated shopping lists that populate when essentials hit zero. Built it with Next.js 14, TypeScript, and Clerk for auth.
+
+Result: A production app that actually solves a real problem. My family uses it daily. Zero food waste in 2 months.`,
+    tech: ["Next.js 14", "TypeScript", "MongoDB", "Mongoose", "OpenAI GPT-4 Vision", "Clerk", "Tailwind CSS"],
+    github: "https://github.com/Mohamed-Salah-222/virtual-kitchen",
+    demo: "https://vritual-kitchen.vercel.app/",
+    features: ["AI-Powered Ingredient Recognition from Photos", "Smart Recipe Generation Based on Inventory", "Real-Time Kitchen Inventory Management", "Automatic Shopping List Generation", "Cooking History with Ingredient Deduction", "Dietary Filters (Halal, Vegan, Keto, Gluten-Free)"],
+    screenshots: ["vk.png"],
+    keyAchievements: [
+      "Integrated OpenAI GPT-4 Vision API to extract ingredients from kitchen photos with automatic categorization and duplicate detection.",
+      "Built intelligent recipe matching system that analyzes user inventory and generates personalized recipes with ingredient match percentages.",
+      "Implemented real-time inventory system using MongoDB transactions handling concurrent updates across multiple devices without data conflicts.",
+      "Designed automated shopping list that populates with zero-quantity essential items and tracks cooking history with smart ingredient deduction.",
+    ],
+  },
+  {
     title: "StudyBuddy",
     longDescription: `Students juggle 7+ apps to manage studying: calendar, notes, reminders, forums, flashcard apps, file storage, AI tutors. They lose 20+ minutes daily just switching between tools. I solved this by consolidating everything into StudyBuddy.
 
